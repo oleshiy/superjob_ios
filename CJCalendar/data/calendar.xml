@@ -1,0 +1,18 @@
+<calendars>
+    <calendar year="2013">
+        <month month="01" name="Январь" holiday_color="3D89CC">
+            <holiday name="Рождество и НГ" start="1" finish="8"/>
+            <dayoff name="Выходной" start="5" finish="6"/>
+            <dayoff name="Выходной" start="12" finish="13"/>
+            <dayoff name="Выходной" start="19" finish="20"/>
+            <dayoff name="Выходной" start="26" finish="27"/>
+        </month>
+        <month month="02" name="Февраль">
+            <holiday name="23-февраля" start="23"/>
+            <dayoff name="Выходной" start="12" finish="13"/>
+            <dayoff name="Выходной" start="19" finish="20"/>
+            <dayoff name="Выходной" start="26" finish="27"/>
+        </month>
+        
+    </calendar>
+<calendars>

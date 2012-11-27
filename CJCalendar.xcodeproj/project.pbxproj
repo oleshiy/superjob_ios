@@ -1,0 +1,620 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7246BE991663FCBD00E01B9F /* Calendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246BE981663FCBD00E01B9F /* Calendar.m */; };
+		7246BE9C1663FCCD00E01B9F /* Month.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246BE9B1663FCCD00E01B9F /* Month.m */; };
+		7246BE9F1663FCE100E01B9F /* DayOfMonth.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246BE9E1663FCE100E01B9F /* DayOfMonth.m */; };
+		7246BEA21663FD8700E01B9F /* Holiday.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246BEA11663FD8700E01B9F /* Holiday.m */; };
+		7246BEA51663FD9500E01B9F /* DayOff.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246BEA41663FD9500E01B9F /* DayOff.m */; };
+		7246BEB716640F3800E01B9F /* downArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7246BEA716640F3800E01B9F /* downArrow.png */; };
+		7246BEB816640F3800E01B9F /* downArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7246BEA816640F3800E01B9F /* downArrow@2x.png */; };
+		7246BEB916640F3800E01B9F /* hDivider.png in Resources */ = {isa = PBXBuildFile; fileRef = 7246BEA916640F3800E01B9F /* hDivider.png */; };
+		7246BEBA16640F3800E01B9F /* infoButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 7246BEAA16640F3800E01B9F /* infoButton.png */; };
+		7246BEBB16640F3800E01B9F /* infoButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7246BEAB16640F3800E01B9F /* infoButton@2x.png */; };
+		7246BEBC16640F3800E01B9F /* leftArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7246BEAC16640F3800E01B9F /* leftArrow.png */; };
+		7246BEBD16640F3800E01B9F /* leftArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7246BEAD16640F3800E01B9F /* leftArrow@2x.png */; };
+		7246BEBE16640F3800E01B9F /* ribbon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7246BEAE16640F3800E01B9F /* ribbon.png */; };
+		7246BEBF16640F3800E01B9F /* ribbon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7246BEAF16640F3800E01B9F /* ribbon@2x.png */; };
+		7246BEC016640F3800E01B9F /* rightArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7246BEB016640F3800E01B9F /* rightArrow.png */; };
+		7246BEC116640F3800E01B9F /* rightArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7246BEB116640F3800E01B9F /* rightArrow@2x.png */; };
+		7246BEC216640F3800E01B9F /* sjLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7246BEB216640F3800E01B9F /* sjLogo.png */; };
+		7246BEC316640F3800E01B9F /* sjLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7246BEB316640F3800E01B9F /* sjLogo@2x.png */; };
+		7246BEC416640F3800E01B9F /* sjSlogan.png in Resources */ = {isa = PBXBuildFile; fileRef = 7246BEB416640F3800E01B9F /* sjSlogan.png */; };
+		7246BEC516640F3800E01B9F /* sjSlogan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7246BEB516640F3800E01B9F /* sjSlogan@2x.png */; };
+		7246BEC616640F3800E01B9F /* thinDivider.png in Resources */ = {isa = PBXBuildFile; fileRef = 7246BEB616640F3800E01B9F /* thinDivider.png */; };
+		7246BEF9166410EB00E01B9F /* CXMLDocument_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246BEDE166410EB00E01B9F /* CXMLDocument_CreationExtensions.m */; };
+		7246BEFA166410EB00E01B9F /* CXMLNode_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246BEE0166410EB00E01B9F /* CXMLNode_CreationExtensions.m */; };
+		7246BEFB166410EB00E01B9F /* CXHTMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246BEE2166410EB00E01B9F /* CXHTMLDocument.m */; };
+		7246BEFC166410EB00E01B9F /* CXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246BEE4166410EB00E01B9F /* CXMLDocument.m */; };
+		7246BEFD166410EB00E01B9F /* CXMLDocument_PrivateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246BEE6166410EB00E01B9F /* CXMLDocument_PrivateExtensions.m */; };
+		7246BEFE166410EB00E01B9F /* CXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246BEE8166410EB00E01B9F /* CXMLElement.m */; };
+		7246BEFF166410EB00E01B9F /* CXMLElement_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246BEEA166410EB00E01B9F /* CXMLElement_CreationExtensions.m */; };
+		7246BF00166410EB00E01B9F /* CXMLElement_ElementTreeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246BEEC166410EB00E01B9F /* CXMLElement_ElementTreeExtensions.m */; };
+		7246BF01166410EB00E01B9F /* CXMLNamespaceNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246BEEE166410EB00E01B9F /* CXMLNamespaceNode.m */; };
+		7246BF02166410EB00E01B9F /* CXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246BEF0166410EB00E01B9F /* CXMLNode.m */; };
+		7246BF03166410EB00E01B9F /* CXMLNode_PrivateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246BEF2166410EB00E01B9F /* CXMLNode_PrivateExtensions.m */; };
+		7246BF04166410EB00E01B9F /* CXMLNode_XPathExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246BEF4166410EB00E01B9F /* CXMLNode_XPathExtensions.m */; };
+		7246BF05166410EB00E01B9F /* CTidy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246BEF7166410EB00E01B9F /* CTidy.m */; };
+		7246BF08166418CD00E01B9F /* CJMonthDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246BF07166418CC00E01B9F /* CJMonthDetailsView.m */; };
+		7246BF0D1664218800E01B9F /* ProximaNova-Reg.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7246BF0B1664218800E01B9F /* ProximaNova-Reg.otf */; };
+		7246BF0E1664218800E01B9F /* ProximaNova-Xbold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7246BF0C1664218800E01B9F /* ProximaNova-Xbold.otf */; };
+		7246BF19166426E600E01B9F /* CJCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246BF18166426E600E01B9F /* CJCalendarView.m */; };
+		7246BF2A16642DA400E01B9F /* DateButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246BF2016642DA400E01B9F /* DateButton.m */; };
+		7246BF2B16642DA400E01B9F /* KalDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246BF2216642DA400E01B9F /* KalDate.m */; };
+		7246BF2C16642DA400E01B9F /* KalLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246BF2416642DA400E01B9F /* KalLogic.m */; };
+		7246BF2D16642DA400E01B9F /* MonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246BF2716642DA400E01B9F /* MonthView.m */; };
+		7246BF2E16642DA400E01B9F /* NSDateAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246BF2916642DA400E01B9F /* NSDateAdditions.m */; };
+		72B4C5F01662AF22006DA90C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72B4C5EF1662AF22006DA90C /* UIKit.framework */; };
+		72B4C5F21662AF22006DA90C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72B4C5F11662AF22006DA90C /* Foundation.framework */; };
+		72B4C5F41662AF22006DA90C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72B4C5F31662AF22006DA90C /* CoreGraphics.framework */; };
+		72B4C5FA1662AF22006DA90C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72B4C5F81662AF22006DA90C /* InfoPlist.strings */; };
+		72B4C5FC1662AF22006DA90C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72B4C5FB1662AF22006DA90C /* main.m */; };
+		72B4C6001662AF22006DA90C /* CJAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72B4C5FF1662AF22006DA90C /* CJAppDelegate.m */; };
+		72B4C6021662AF22006DA90C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 72B4C6011662AF22006DA90C /* Default.png */; };
+		72B4C6041662AF22006DA90C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72B4C6031662AF22006DA90C /* Default@2x.png */; };
+		72B4C6061662AF22006DA90C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72B4C6051662AF22006DA90C /* Default-568h@2x.png */; };
+		72B4C6091662AF22006DA90C /* CJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72B4C6081662AF22006DA90C /* CJViewController.m */; };
+		72B4C60C1662AF22006DA90C /* CJViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72B4C60A1662AF22006DA90C /* CJViewController_iPhone.xib */; };
+		72B4C60F1662AF22006DA90C /* CJViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72B4C60D1662AF22006DA90C /* CJViewController_iPad.xib */; };
+		72B4C6171662AF8F006DA90C /* calendar.xml in Resources */ = {isa = PBXBuildFile; fileRef = 72B4C6161662AF8F006DA90C /* calendar.xml */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7246BE971663FCBD00E01B9F /* Calendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calendar.h; sourceTree = "<group>"; };
+		7246BE981663FCBD00E01B9F /* Calendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calendar.m; sourceTree = "<group>"; };
+		7246BE9A1663FCCD00E01B9F /* Month.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Month.h; sourceTree = "<group>"; };
+		7246BE9B1663FCCD00E01B9F /* Month.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Month.m; sourceTree = "<group>"; };
+		7246BE9D1663FCE100E01B9F /* DayOfMonth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayOfMonth.h; sourceTree = "<group>"; };
+		7246BE9E1663FCE100E01B9F /* DayOfMonth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayOfMonth.m; sourceTree = "<group>"; };
+		7246BEA01663FD8700E01B9F /* Holiday.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Holiday.h; sourceTree = "<group>"; };
+		7246BEA11663FD8700E01B9F /* Holiday.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Holiday.m; sourceTree = "<group>"; };
+		7246BEA31663FD9500E01B9F /* DayOff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayOff.h; sourceTree = "<group>"; };
+		7246BEA41663FD9500E01B9F /* DayOff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayOff.m; sourceTree = "<group>"; };
+		7246BEA716640F3800E01B9F /* downArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = downArrow.png; sourceTree = "<group>"; };
+		7246BEA816640F3800E01B9F /* downArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "downArrow@2x.png"; sourceTree = "<group>"; };
+		7246BEA916640F3800E01B9F /* hDivider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hDivider.png; sourceTree = "<group>"; };
+		7246BEAA16640F3800E01B9F /* infoButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = infoButton.png; sourceTree = "<group>"; };
+		7246BEAB16640F3800E01B9F /* infoButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "infoButton@2x.png"; sourceTree = "<group>"; };
+		7246BEAC16640F3800E01B9F /* leftArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftArrow.png; sourceTree = "<group>"; };
+		7246BEAD16640F3800E01B9F /* leftArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leftArrow@2x.png"; sourceTree = "<group>"; };
+		7246BEAE16640F3800E01B9F /* ribbon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ribbon.png; sourceTree = "<group>"; };
+		7246BEAF16640F3800E01B9F /* ribbon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ribbon@2x.png"; sourceTree = "<group>"; };
+		7246BEB016640F3800E01B9F /* rightArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rightArrow.png; sourceTree = "<group>"; };
+		7246BEB116640F3800E01B9F /* rightArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rightArrow@2x.png"; sourceTree = "<group>"; };
+		7246BEB216640F3800E01B9F /* sjLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sjLogo.png; sourceTree = "<group>"; };
+		7246BEB316640F3800E01B9F /* sjLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sjLogo@2x.png"; sourceTree = "<group>"; };
+		7246BEB416640F3800E01B9F /* sjSlogan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sjSlogan.png; sourceTree = "<group>"; };
+		7246BEB516640F3800E01B9F /* sjSlogan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sjSlogan@2x.png"; sourceTree = "<group>"; };
+		7246BEB616640F3800E01B9F /* thinDivider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thinDivider.png; sourceTree = "<group>"; };
+		7246BEDD166410EB00E01B9F /* CXMLDocument_CreationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLDocument_CreationExtensions.h; sourceTree = "<group>"; };
+		7246BEDE166410EB00E01B9F /* CXMLDocument_CreationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLDocument_CreationExtensions.m; sourceTree = "<group>"; };
+		7246BEDF166410EB00E01B9F /* CXMLNode_CreationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode_CreationExtensions.h; sourceTree = "<group>"; };
+		7246BEE0166410EB00E01B9F /* CXMLNode_CreationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode_CreationExtensions.m; sourceTree = "<group>"; };
+		7246BEE1166410EB00E01B9F /* CXHTMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXHTMLDocument.h; sourceTree = "<group>"; };
+		7246BEE2166410EB00E01B9F /* CXHTMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXHTMLDocument.m; sourceTree = "<group>"; };
+		7246BEE3166410EB00E01B9F /* CXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLDocument.h; sourceTree = "<group>"; };
+		7246BEE4166410EB00E01B9F /* CXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLDocument.m; sourceTree = "<group>"; };
+		7246BEE5166410EB00E01B9F /* CXMLDocument_PrivateExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLDocument_PrivateExtensions.h; sourceTree = "<group>"; };
+		7246BEE6166410EB00E01B9F /* CXMLDocument_PrivateExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLDocument_PrivateExtensions.m; sourceTree = "<group>"; };
+		7246BEE7166410EB00E01B9F /* CXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLElement.h; sourceTree = "<group>"; };
+		7246BEE8166410EB00E01B9F /* CXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLElement.m; sourceTree = "<group>"; };
+		7246BEE9166410EB00E01B9F /* CXMLElement_CreationExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLElement_CreationExtensions.h; sourceTree = "<group>"; };
+		7246BEEA166410EB00E01B9F /* CXMLElement_CreationExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLElement_CreationExtensions.m; sourceTree = "<group>"; };
+		7246BEEB166410EB00E01B9F /* CXMLElement_ElementTreeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLElement_ElementTreeExtensions.h; sourceTree = "<group>"; };
+		7246BEEC166410EB00E01B9F /* CXMLElement_ElementTreeExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLElement_ElementTreeExtensions.m; sourceTree = "<group>"; };
+		7246BEED166410EB00E01B9F /* CXMLNamespaceNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNamespaceNode.h; sourceTree = "<group>"; };
+		7246BEEE166410EB00E01B9F /* CXMLNamespaceNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNamespaceNode.m; sourceTree = "<group>"; };
+		7246BEEF166410EB00E01B9F /* CXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode.h; sourceTree = "<group>"; };
+		7246BEF0166410EB00E01B9F /* CXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode.m; sourceTree = "<group>"; };
+		7246BEF1166410EB00E01B9F /* CXMLNode_PrivateExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode_PrivateExtensions.h; sourceTree = "<group>"; };
+		7246BEF2166410EB00E01B9F /* CXMLNode_PrivateExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode_PrivateExtensions.m; sourceTree = "<group>"; };
+		7246BEF3166410EB00E01B9F /* CXMLNode_XPathExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMLNode_XPathExtensions.h; sourceTree = "<group>"; };
+		7246BEF4166410EB00E01B9F /* CXMLNode_XPathExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMLNode_XPathExtensions.m; sourceTree = "<group>"; };
+		7246BEF6166410EB00E01B9F /* CTidy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTidy.h; sourceTree = "<group>"; };
+		7246BEF7166410EB00E01B9F /* CTidy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTidy.m; sourceTree = "<group>"; };
+		7246BEF8166410EB00E01B9F /* TouchXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchXML.h; sourceTree = "<group>"; };
+		7246BF06166418CC00E01B9F /* CJMonthDetailsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJMonthDetailsView.h; sourceTree = "<group>"; };
+		7246BF07166418CC00E01B9F /* CJMonthDetailsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJMonthDetailsView.m; sourceTree = "<group>"; };
+		7246BF0B1664218800E01B9F /* ProximaNova-Reg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Reg.otf"; sourceTree = "<group>"; };
+		7246BF0C1664218800E01B9F /* ProximaNova-Xbold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Xbold.otf"; sourceTree = "<group>"; };
+		7246BF17166426E600E01B9F /* CJCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJCalendarView.h; sourceTree = "<group>"; };
+		7246BF18166426E600E01B9F /* CJCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJCalendarView.m; sourceTree = "<group>"; };
+		7246BF1F16642DA400E01B9F /* DateButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateButton.h; sourceTree = "<group>"; };
+		7246BF2016642DA400E01B9F /* DateButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateButton.m; sourceTree = "<group>"; };
+		7246BF2116642DA400E01B9F /* KalDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalDate.h; sourceTree = "<group>"; };
+		7246BF2216642DA400E01B9F /* KalDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalDate.m; sourceTree = "<group>"; };
+		7246BF2316642DA400E01B9F /* KalLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalLogic.h; sourceTree = "<group>"; };
+		7246BF2416642DA400E01B9F /* KalLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KalLogic.m; sourceTree = "<group>"; };
+		7246BF2516642DA400E01B9F /* KalPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KalPrivate.h; sourceTree = "<group>"; };
+		7246BF2616642DA400E01B9F /* MonthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonthView.h; sourceTree = "<group>"; };
+		7246BF2716642DA400E01B9F /* MonthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonthView.m; sourceTree = "<group>"; };
+		7246BF2816642DA400E01B9F /* NSDateAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDateAdditions.h; sourceTree = "<group>"; };
+		7246BF2916642DA400E01B9F /* NSDateAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDateAdditions.m; sourceTree = "<group>"; };
+		72B4C5EB1662AF22006DA90C /* CJCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CJCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		72B4C5EF1662AF22006DA90C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		72B4C5F11662AF22006DA90C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		72B4C5F31662AF22006DA90C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		72B4C5F71662AF22006DA90C /* CJCalendar-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CJCalendar-Info.plist"; sourceTree = "<group>"; };
+		72B4C5F91662AF22006DA90C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		72B4C5FB1662AF22006DA90C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		72B4C5FD1662AF22006DA90C /* CJCalendar-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CJCalendar-Prefix.pch"; sourceTree = "<group>"; };
+		72B4C5FE1662AF22006DA90C /* CJAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CJAppDelegate.h; sourceTree = "<group>"; };
+		72B4C5FF1662AF22006DA90C /* CJAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CJAppDelegate.m; sourceTree = "<group>"; };
+		72B4C6011662AF22006DA90C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		72B4C6031662AF22006DA90C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		72B4C6051662AF22006DA90C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		72B4C6071662AF22006DA90C /* CJViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CJViewController.h; sourceTree = "<group>"; };
+		72B4C6081662AF22006DA90C /* CJViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CJViewController.m; sourceTree = "<group>"; };
+		72B4C60B1662AF22006DA90C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CJViewController_iPhone.xib; sourceTree = "<group>"; };
+		72B4C60E1662AF22006DA90C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CJViewController_iPad.xib; sourceTree = "<group>"; };
+		72B4C6161662AF8F006DA90C /* calendar.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = calendar.xml; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		72B4C5E81662AF22006DA90C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72B4C5F01662AF22006DA90C /* UIKit.framework in Frameworks */,
+				72B4C5F21662AF22006DA90C /* Foundation.framework in Frameworks */,
+				72B4C5F41662AF22006DA90C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7246BE951663FC9600E01B9F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7246BE971663FCBD00E01B9F /* Calendar.h */,
+				7246BE981663FCBD00E01B9F /* Calendar.m */,
+				7246BE9A1663FCCD00E01B9F /* Month.h */,
+				7246BE9B1663FCCD00E01B9F /* Month.m */,
+				7246BE9D1663FCE100E01B9F /* DayOfMonth.h */,
+				7246BE9E1663FCE100E01B9F /* DayOfMonth.m */,
+				7246BEA01663FD8700E01B9F /* Holiday.h */,
+				7246BEA11663FD8700E01B9F /* Holiday.m */,
+				7246BEA31663FD9500E01B9F /* DayOff.h */,
+				7246BEA41663FD9500E01B9F /* DayOff.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7246BEA616640F3800E01B9F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				7246BEA716640F3800E01B9F /* downArrow.png */,
+				7246BEA816640F3800E01B9F /* downArrow@2x.png */,
+				7246BEA916640F3800E01B9F /* hDivider.png */,
+				7246BEAA16640F3800E01B9F /* infoButton.png */,
+				7246BEAB16640F3800E01B9F /* infoButton@2x.png */,
+				7246BEAC16640F3800E01B9F /* leftArrow.png */,
+				7246BEAD16640F3800E01B9F /* leftArrow@2x.png */,
+				7246BEAE16640F3800E01B9F /* ribbon.png */,
+				7246BEAF16640F3800E01B9F /* ribbon@2x.png */,
+				7246BEB016640F3800E01B9F /* rightArrow.png */,
+				7246BEB116640F3800E01B9F /* rightArrow@2x.png */,
+				7246BEB216640F3800E01B9F /* sjLogo.png */,
+				7246BEB316640F3800E01B9F /* sjLogo@2x.png */,
+				7246BEB416640F3800E01B9F /* sjSlogan.png */,
+				7246BEB516640F3800E01B9F /* sjSlogan@2x.png */,
+				7246BEB616640F3800E01B9F /* thinDivider.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		7246BEDB166410EB00E01B9F /* TouchXML */ = {
+			isa = PBXGroup;
+			children = (
+				7246BEDC166410EB00E01B9F /* Creation */,
+				7246BEE1166410EB00E01B9F /* CXHTMLDocument.h */,
+				7246BEE2166410EB00E01B9F /* CXHTMLDocument.m */,
+				7246BEE3166410EB00E01B9F /* CXMLDocument.h */,
+				7246BEE4166410EB00E01B9F /* CXMLDocument.m */,
+				7246BEE5166410EB00E01B9F /* CXMLDocument_PrivateExtensions.h */,
+				7246BEE6166410EB00E01B9F /* CXMLDocument_PrivateExtensions.m */,
+				7246BEE7166410EB00E01B9F /* CXMLElement.h */,
+				7246BEE8166410EB00E01B9F /* CXMLElement.m */,
+				7246BEE9166410EB00E01B9F /* CXMLElement_CreationExtensions.h */,
+				7246BEEA166410EB00E01B9F /* CXMLElement_CreationExtensions.m */,
+				7246BEEB166410EB00E01B9F /* CXMLElement_ElementTreeExtensions.h */,
+				7246BEEC166410EB00E01B9F /* CXMLElement_ElementTreeExtensions.m */,
+				7246BEED166410EB00E01B9F /* CXMLNamespaceNode.h */,
+				7246BEEE166410EB00E01B9F /* CXMLNamespaceNode.m */,
+				7246BEEF166410EB00E01B9F /* CXMLNode.h */,
+				7246BEF0166410EB00E01B9F /* CXMLNode.m */,
+				7246BEF1166410EB00E01B9F /* CXMLNode_PrivateExtensions.h */,
+				7246BEF2166410EB00E01B9F /* CXMLNode_PrivateExtensions.m */,
+				7246BEF3166410EB00E01B9F /* CXMLNode_XPathExtensions.h */,
+				7246BEF4166410EB00E01B9F /* CXMLNode_XPathExtensions.m */,
+				7246BEF5166410EB00E01B9F /* Tidy */,
+				7246BEF8166410EB00E01B9F /* TouchXML.h */,
+			);
+			name = TouchXML;
+			path = CJCalendar/TouchXML;
+			sourceTree = "<group>";
+		};
+		7246BEDC166410EB00E01B9F /* Creation */ = {
+			isa = PBXGroup;
+			children = (
+				7246BEDD166410EB00E01B9F /* CXMLDocument_CreationExtensions.h */,
+				7246BEDE166410EB00E01B9F /* CXMLDocument_CreationExtensions.m */,
+				7246BEDF166410EB00E01B9F /* CXMLNode_CreationExtensions.h */,
+				7246BEE0166410EB00E01B9F /* CXMLNode_CreationExtensions.m */,
+			);
+			path = Creation;
+			sourceTree = "<group>";
+		};
+		7246BEF5166410EB00E01B9F /* Tidy */ = {
+			isa = PBXGroup;
+			children = (
+				7246BEF6166410EB00E01B9F /* CTidy.h */,
+				7246BEF7166410EB00E01B9F /* CTidy.m */,
+			);
+			path = Tidy;
+			sourceTree = "<group>";
+		};
+		7246BF09166418DF00E01B9F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7246BF1E16642DA400E01B9F /* Calendar */,
+				7246BF06166418CC00E01B9F /* CJMonthDetailsView.h */,
+				7246BF07166418CC00E01B9F /* CJMonthDetailsView.m */,
+				7246BF17166426E600E01B9F /* CJCalendarView.h */,
+				7246BF18166426E600E01B9F /* CJCalendarView.m */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		7246BF0A1664218800E01B9F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7246BF0B1664218800E01B9F /* ProximaNova-Reg.otf */,
+				7246BF0C1664218800E01B9F /* ProximaNova-Xbold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		7246BF1E16642DA400E01B9F /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				7246BF1F16642DA400E01B9F /* DateButton.h */,
+				7246BF2016642DA400E01B9F /* DateButton.m */,
+				7246BF2116642DA400E01B9F /* KalDate.h */,
+				7246BF2216642DA400E01B9F /* KalDate.m */,
+				7246BF2316642DA400E01B9F /* KalLogic.h */,
+				7246BF2416642DA400E01B9F /* KalLogic.m */,
+				7246BF2516642DA400E01B9F /* KalPrivate.h */,
+				7246BF2616642DA400E01B9F /* MonthView.h */,
+				7246BF2716642DA400E01B9F /* MonthView.m */,
+				7246BF2816642DA400E01B9F /* NSDateAdditions.h */,
+				7246BF2916642DA400E01B9F /* NSDateAdditions.m */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		72B4C5E01662AF22006DA90C = {
+			isa = PBXGroup;
+			children = (
+				7246BEDB166410EB00E01B9F /* TouchXML */,
+				72B4C5F51662AF22006DA90C /* CJCalendar */,
+				72B4C5EE1662AF22006DA90C /* Frameworks */,
+				72B4C5EC1662AF22006DA90C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		72B4C5EC1662AF22006DA90C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				72B4C5EB1662AF22006DA90C /* CJCalendar.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		72B4C5EE1662AF22006DA90C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72B4C5EF1662AF22006DA90C /* UIKit.framework */,
+				72B4C5F11662AF22006DA90C /* Foundation.framework */,
+				72B4C5F31662AF22006DA90C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		72B4C5F51662AF22006DA90C /* CJCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				7246BF09166418DF00E01B9F /* UI */,
+				7246BE951663FC9600E01B9F /* Model */,
+				72B4C5FE1662AF22006DA90C /* CJAppDelegate.h */,
+				72B4C5FF1662AF22006DA90C /* CJAppDelegate.m */,
+				72B4C6071662AF22006DA90C /* CJViewController.h */,
+				72B4C6081662AF22006DA90C /* CJViewController.m */,
+				72B4C60A1662AF22006DA90C /* CJViewController_iPhone.xib */,
+				72B4C60D1662AF22006DA90C /* CJViewController_iPad.xib */,
+				72B4C5F61662AF22006DA90C /* Supporting Files */,
+			);
+			path = CJCalendar;
+			sourceTree = "<group>";
+		};
+		72B4C5F61662AF22006DA90C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7246BF0A1664218800E01B9F /* Fonts */,
+				7246BEA616640F3800E01B9F /* Images */,
+				72B4C6151662AF59006DA90C /* data */,
+				72B4C5F71662AF22006DA90C /* CJCalendar-Info.plist */,
+				72B4C5F81662AF22006DA90C /* InfoPlist.strings */,
+				72B4C5FB1662AF22006DA90C /* main.m */,
+				72B4C5FD1662AF22006DA90C /* CJCalendar-Prefix.pch */,
+				72B4C6011662AF22006DA90C /* Default.png */,
+				72B4C6031662AF22006DA90C /* Default@2x.png */,
+				72B4C6051662AF22006DA90C /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		72B4C6151662AF59006DA90C /* data */ = {
+			isa = PBXGroup;
+			children = (
+				72B4C6161662AF8F006DA90C /* calendar.xml */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		72B4C5EA1662AF22006DA90C /* CJCalendar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72B4C6121662AF22006DA90C /* Build configuration list for PBXNativeTarget "CJCalendar" */;
+			buildPhases = (
+				72B4C5E71662AF22006DA90C /* Sources */,
+				72B4C5E81662AF22006DA90C /* Frameworks */,
+				72B4C5E91662AF22006DA90C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CJCalendar;
+			productName = CJCalendar;
+			productReference = 72B4C5EB1662AF22006DA90C /* CJCalendar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		72B4C5E21662AF22006DA90C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CJ;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Funny Codes";
+			};
+			buildConfigurationList = 72B4C5E51662AF22006DA90C /* Build configuration list for PBXProject "CJCalendar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 72B4C5E01662AF22006DA90C;
+			productRefGroup = 72B4C5EC1662AF22006DA90C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				72B4C5EA1662AF22006DA90C /* CJCalendar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		72B4C5E91662AF22006DA90C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72B4C5FA1662AF22006DA90C /* InfoPlist.strings in Resources */,
+				72B4C6021662AF22006DA90C /* Default.png in Resources */,
+				72B4C6041662AF22006DA90C /* Default@2x.png in Resources */,
+				72B4C6061662AF22006DA90C /* Default-568h@2x.png in Resources */,
+				72B4C60C1662AF22006DA90C /* CJViewController_iPhone.xib in Resources */,
+				72B4C60F1662AF22006DA90C /* CJViewController_iPad.xib in Resources */,
+				72B4C6171662AF8F006DA90C /* calendar.xml in Resources */,
+				7246BEB716640F3800E01B9F /* downArrow.png in Resources */,
+				7246BEB816640F3800E01B9F /* downArrow@2x.png in Resources */,
+				7246BEB916640F3800E01B9F /* hDivider.png in Resources */,
+				7246BEBA16640F3800E01B9F /* infoButton.png in Resources */,
+				7246BEBB16640F3800E01B9F /* infoButton@2x.png in Resources */,
+				7246BEBC16640F3800E01B9F /* leftArrow.png in Resources */,
+				7246BEBD16640F3800E01B9F /* leftArrow@2x.png in Resources */,
+				7246BEBE16640F3800E01B9F /* ribbon.png in Resources */,
+				7246BEBF16640F3800E01B9F /* ribbon@2x.png in Resources */,
+				7246BEC016640F3800E01B9F /* rightArrow.png in Resources */,
+				7246BEC116640F3800E01B9F /* rightArrow@2x.png in Resources */,
+				7246BEC216640F3800E01B9F /* sjLogo.png in Resources */,
+				7246BEC316640F3800E01B9F /* sjLogo@2x.png in Resources */,
+				7246BEC416640F3800E01B9F /* sjSlogan.png in Resources */,
+				7246BEC516640F3800E01B9F /* sjSlogan@2x.png in Resources */,
+				7246BEC616640F3800E01B9F /* thinDivider.png in Resources */,
+				7246BF0D1664218800E01B9F /* ProximaNova-Reg.otf in Resources */,
+				7246BF0E1664218800E01B9F /* ProximaNova-Xbold.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		72B4C5E71662AF22006DA90C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72B4C5FC1662AF22006DA90C /* main.m in Sources */,
+				72B4C6001662AF22006DA90C /* CJAppDelegate.m in Sources */,
+				72B4C6091662AF22006DA90C /* CJViewController.m in Sources */,
+				7246BE991663FCBD00E01B9F /* Calendar.m in Sources */,
+				7246BE9C1663FCCD00E01B9F /* Month.m in Sources */,
+				7246BE9F1663FCE100E01B9F /* DayOfMonth.m in Sources */,
+				7246BEA21663FD8700E01B9F /* Holiday.m in Sources */,
+				7246BEA51663FD9500E01B9F /* DayOff.m in Sources */,
+				7246BEF9166410EB00E01B9F /* CXMLDocument_CreationExtensions.m in Sources */,
+				7246BEFA166410EB00E01B9F /* CXMLNode_CreationExtensions.m in Sources */,
+				7246BEFB166410EB00E01B9F /* CXHTMLDocument.m in Sources */,
+				7246BEFC166410EB00E01B9F /* CXMLDocument.m in Sources */,
+				7246BEFD166410EB00E01B9F /* CXMLDocument_PrivateExtensions.m in Sources */,
+				7246BEFE166410EB00E01B9F /* CXMLElement.m in Sources */,
+				7246BEFF166410EB00E01B9F /* CXMLElement_CreationExtensions.m in Sources */,
+				7246BF00166410EB00E01B9F /* CXMLElement_ElementTreeExtensions.m in Sources */,
+				7246BF01166410EB00E01B9F /* CXMLNamespaceNode.m in Sources */,
+				7246BF02166410EB00E01B9F /* CXMLNode.m in Sources */,
+				7246BF03166410EB00E01B9F /* CXMLNode_PrivateExtensions.m in Sources */,
+				7246BF04166410EB00E01B9F /* CXMLNode_XPathExtensions.m in Sources */,
+				7246BF05166410EB00E01B9F /* CTidy.m in Sources */,
+				7246BF08166418CD00E01B9F /* CJMonthDetailsView.m in Sources */,
+				7246BF19166426E600E01B9F /* CJCalendarView.m in Sources */,
+				7246BF2A16642DA400E01B9F /* DateButton.m in Sources */,
+				7246BF2B16642DA400E01B9F /* KalDate.m in Sources */,
+				7246BF2C16642DA400E01B9F /* KalLogic.m in Sources */,
+				7246BF2D16642DA400E01B9F /* MonthView.m in Sources */,
+				7246BF2E16642DA400E01B9F /* NSDateAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		72B4C5F81662AF22006DA90C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72B4C5F91662AF22006DA90C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		72B4C60A1662AF22006DA90C /* CJViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72B4C60B1662AF22006DA90C /* en */,
+			);
+			name = CJViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		72B4C60D1662AF22006DA90C /* CJViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72B4C60E1662AF22006DA90C /* en */,
+			);
+			name = CJViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		72B4C6101662AF22006DA90C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		72B4C6111662AF22006DA90C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		72B4C6131662AF22006DA90C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CJCalendar/CJCalendar-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = "CJCalendar/CJCalendar-Info.plist";
+				OTHER_LDFLAGS = "-lxml2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		72B4C6141662AF22006DA90C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CJCalendar/CJCalendar-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = "CJCalendar/CJCalendar-Info.plist";
+				OTHER_LDFLAGS = "-lxml2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		72B4C5E51662AF22006DA90C /* Build configuration list for PBXProject "CJCalendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72B4C6101662AF22006DA90C /* Debug */,
+				72B4C6111662AF22006DA90C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72B4C6121662AF22006DA90C /* Build configuration list for PBXNativeTarget "CJCalendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72B4C6131662AF22006DA90C /* Debug */,
+				72B4C6141662AF22006DA90C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 72B4C5E21662AF22006DA90C /* Project object */;
+}
