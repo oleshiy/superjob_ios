@@ -105,6 +105,12 @@
     [self replaceFontFamilyOnlabelsInView:calendarView];
     
     [self generateCalendar];
+    
+    [self.view insertSubview:monthDetailsView aboveSubview:calendarView];
+    CGRect f = monthDetailsView.frame;
+    
+    f.origin.y = calendarView.frame.size.height + calendarView.frame.origin.y;
+    monthDetailsView.frame = f;
 }
 
 - (void)didReceiveMemoryWarning
