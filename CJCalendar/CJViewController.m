@@ -78,7 +78,7 @@
 		[monthScroll addSubview:mv];
 		[mv release];
         mv.delegate = self;
-		monthDate = [monthDate cc_dateByMovingToFirstDayOfTheFollowingMonth];
+		//monthDate = [monthDate cc_dateByMovingToFirstDayOfTheFollowingMonth];
 	}
 	
 	monthScroll.contentSize = CGSizeMake(monthViewWidth * numberOfMonthes, monthViewHeight);
