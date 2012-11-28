@@ -8,6 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+@class CXMLElement;
 @interface Calendar : NSObject
+{
+    @private
+    NSArray* monthes;
+}
+
+@property (nonatomic, retain) NSArray* monthes;
+
+-(id) initWithXml:(CXMLElement*)el;
 
 @end

@@ -11,9 +11,11 @@
 #import "NSDateAdditions.h"
 #import "KalDate.h"
 #import <QuartzCore/QuartzCore.h>
+#import "Month.h"
+#import "Holiday.h"
 
 const NSUInteger kNumberOfDateCols = 7;
-const NSUInteger kNumberOfDateRows = 5;
+const NSUInteger kNumberOfDateRows = 6;
 
 @implementation MonthView
 
@@ -21,6 +23,7 @@ const NSUInteger kNumberOfDateRows = 5;
 @synthesize startDate;
 @synthesize titleLabel;
 @synthesize delegate;
+@synthesize month;
 
 - (id)initWithFrame:(CGRect)frame logic:(KalLogic*)thelogic
 {
@@ -104,8 +107,11 @@ const NSUInteger kNumberOfDateRows = 5;
 	NSArray* daysMonth = logic.daysInSelectedMonth;
     NSArray* daysAfter = logic.daysInFirstWeekOfFollowingMonth;
 
+    month.numberOfDays = [daysMonth count];
+    
 	NSUInteger daysToSkipBefore = [daysBefore count];
 	NSUInteger daysCount = [daysMonth count];
+	NSUInteger daysAfterCount = [daysAfter count];
 	NSUInteger cnt = 0;
 	NSUInteger cntBefore = 0;
     NSUInteger cntAfter = 0;
@@ -115,9 +121,16 @@ const NSUInteger kNumberOfDateRows = 5;
 	titleLabel.text = [NSString stringWithFormat:@"%@ %d", [monthes objectAtIndex:[std month]-1], [std year]];
 	
     KalDate* dt = nil;
+    
 	for(DateButton* btn in dateButtons)
 	{
-        
+
+        if(!daysAfterCount && !daysCount)
+        {
+            btn.hidden = YES;
+            continue;
+        }
+
 		if(daysToSkipBefore)
 		{
 			btn.enabled = NO;
@@ -128,6 +141,22 @@ const NSUInteger kNumberOfDateRows = 5;
 		} else if(daysCount)
 		{
 			dt = [daysMonth objectAtIndex:cnt];
+            
+            NSUInteger day = [dt day];
+
+            if([month holidayForDay:day] == HKHoliday)
+            {
+                btn.backgroundColor = month.holidayColor;
+                [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            }
+            else if([month holidayForDay:day] == HKBeforeHoliday)
+                btn.backgroundColor = month.beforeHolidayColor;
+            else if([month holidayForDay:day] == HKDayOff)
+            {
+                btn.backgroundColor = month.holidayColor;
+                [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+            }
+
 			--daysCount;
 			++cnt;
 		} else
@@ -135,12 +164,15 @@ const NSUInteger kNumberOfDateRows = 5;
             [btn setTitleColor:[UIColor colorWithRed:189/255.0f green:204/255.0f blue:210/255.0f alpha:1.0f] forState:UIControlStateNormal];
             dt = [daysAfter objectAtIndex:cntAfter];
             ++cntAfter;
+            --daysAfterCount;
         }
         
         [btn setTitle:[NSString stringWithFormat:@"%d", [dt day]] forState:UIControlStateNormal];
+        
         btn.date = [dt NSDate];
         [btn addTarget:self action:@selector(didSelectDate:) forControlEvents:UIControlEventTouchUpInside];
 
+        
 		
 	}
 	
@@ -161,6 +193,7 @@ const NSUInteger kNumberOfDateRows = 5;
 
 - (void)dealloc 
 {
+    [month release];
 	[titleLabel release];
 	[logic release];
 	[startDate release];

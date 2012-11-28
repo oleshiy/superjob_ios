@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "KalLogic.h"
 
+
+@class Month;
+
 @protocol MonthViewDelegate
 -(void) didSelectDate:(NSDate*)date;
 @end
@@ -23,12 +26,15 @@
 	UILabel* titleLabel;
     
     id<MonthViewDelegate> delegate;
+    
+    Month* month;
 }
 
 @property (nonatomic, assign) id<MonthViewDelegate> delegate;
 @property (nonatomic, retain) NSArray* dateButtons;
 @property (nonatomic, retain) NSDate* startDate;
 @property (nonatomic, retain) UILabel* titleLabel;
+@property (nonatomic, retain) Month* month;
 
 - (id)initWithFrame:(CGRect)frame logic:(KalLogic*)logic;
 

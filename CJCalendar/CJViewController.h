@@ -12,7 +12,7 @@
 
 @class CJMonthDetailsView;
 @class KalLogic;
-
+@class Calendar;
 @interface CJViewController : UIViewController<MonthViewDelegate>
 {
     @private
@@ -20,9 +20,16 @@
     IBOutlet CJMonthDetailsView *monthDetailsView;
     IBOutlet CJCalendarView *calendarView;
     IBOutlet UIScrollView *monthScroll;
+    IBOutlet UILabel *monthTitle;
     
     KalLogic* logic;
+    Calendar* calendar;
+    
+    NSUInteger calculatedOffset;
+    
 }
 - (IBAction)onInfoButton:(id)sender;
 - (IBAction)onGotoProView:(id)sender;
+- (IBAction)onNextMonth:(id)sender;
+- (IBAction)onPrevMonth:(id)sender;
 @end

@@ -11,6 +11,11 @@
 #import "MonthView.h"
 #import "NSDateAdditions.h"
 #import "KalLogic.h"
+#import "TouchXML.h"
+#import "CXMLDocument.h"
+#import "Calendar.h"
+#import "Month.h"
+#import "MonthView.h"
 
 @interface CJViewController ()
 
@@ -41,21 +46,34 @@
 
 -(void) generateCalendar
 {
-    NSUInteger numberOfMonthes = 12;
     
     CGFloat monthViewWidth = monthScroll.frame.size.width;
 	CGFloat monthViewHeight = monthScroll.frame.size.height;
 	
-	NSDate* monthDate = [NSDate date];
+	NSDate* monthDate = nil;
 	
     if(!logic)
         logic = [[KalLogic alloc] init];
 
 	CGFloat displacement = 0;
+    
+    CXMLDocument* doc = [[CXMLDocument alloc] initWithContentsOfURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"calendar" ofType:@"xml"]]  options:0 error:nil];
+    
+    if(!calendar)
+        calendar = [[Calendar alloc] initWithXml:[doc rootElement]];
+    
+    [doc release];
+    
+    NSUInteger numberOfMonthes = [calendar.monthes count];
+
 	for(NSUInteger i=0; i < numberOfMonthes; ++i)
 	{
-        //		displacement = (i % 2)?15.0f:-15.0f;
+        Month* month = [calendar.monthes objectAtIndex:i];
+
+        monthDate = month.date;
+        
 		MonthView* mv = [[MonthView alloc] initWithFrame:CGRectMake(monthViewWidth * i - displacement, 0, monthViewWidth, monthViewHeight) logic:logic];
+        mv.month = month;
 		mv.startDate = monthDate;
 		[monthScroll addSubview:mv];
 		[mv release];
@@ -64,6 +82,8 @@
 	}
 	
 	monthScroll.contentSize = CGSizeMake(monthViewWidth * numberOfMonthes, monthViewHeight);
+    
+    [self updateMonthLabel];
 }
 
 -(void) didSelectDate:(NSDate*)date
@@ -94,16 +114,74 @@
 }
 
 - (void)dealloc {
+    [calendar release];
     [logic release];
     [ribbonView release];
     [monthDetailsView release];
     [calendarView release];
     [monthScroll release];
+    [monthTitle release];
     [super dealloc];
 }
+
+-(void) updateMonthLabel
+{
+    // update month label depends on scrollview offset
+    
+    calculatedOffset = (NSUInteger)monthScroll.contentOffset.x/monthScroll.frame.size.width;
+    
+//    prevBtn.enabled = (calculatedOffset > 0);
+//    nextBtn.enabled = (calculatedOffset < ([monthesViews count] - 1));
+    
+    MonthView* mv = [monthScroll.subviews objectAtIndex:calculatedOffset];
+    monthTitle.text = [NSString stringWithFormat:@"%@ %d", mv.month.name, mv.month.year];
+    
+    monthDetailsView.month = mv.month;
+    
+}
+
+#pragma mark UIScrollViewDelegate
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView      // called when scroll view grinds to a halt
+{
+    [self updateMonthLabel];
+}
+
+-(void) scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
+{
+    [self updateMonthLabel];
+}
+//actions
 - (IBAction)onInfoButton:(id)sender {
 }
 
 - (IBAction)onGotoProView:(id)sender {
 }
+
+- (IBAction)onNextMonth:(id)sender {
+    if(calculatedOffset == ([monthScroll.subviews count] - 1))
+        return;
+    
+    ++calculatedOffset;
+    
+    CGFloat newOffset = calculatedOffset * monthScroll.frame.size.width;
+    
+    [monthScroll setContentOffset:CGPointMake(newOffset, 0) animated:YES];
+}
+
+- (IBAction)onPrevMonth:(id)sender {
+    if(calculatedOffset == 0)
+        return;
+    
+    --calculatedOffset;
+    
+    CGFloat newOffset = calculatedOffset * monthScroll.frame.size.width;
+    
+    [monthScroll setContentOffset:CGPointMake(newOffset, 0) animated:YES];
+}
+
 @end

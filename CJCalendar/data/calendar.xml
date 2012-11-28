@@ -1,18 +1,93 @@
 <calendars>
     <calendar year="2013">
-        <month month="01" name="Январь" holiday_color="3D89CC">
-            <holiday name="Рождество и НГ" start="1" finish="8"/>
-            <dayoff name="Выходной" start="5" finish="6"/>
-            <dayoff name="Выходной" start="12" finish="13"/>
-            <dayoff name="Выходной" start="19" finish="20"/>
-            <dayoff name="Выходной" start="26" finish="27"/>
+        <month month="01" name="Январь" holiday_color="3D89CC"  before_holiday_color="3D89CC">
+            <holiday kind="holiday" name="Рождество и НГ" start="1" finish="8"/>
+            <holiday kind="dayoff" name="Выходной" start="12" finish="13"/>
+            <holiday kind="dayoff" name="Выходной" start="19" finish="20"/>
+            <holiday kind="dayoff" name="Выходной" start="26" finish="27"/>
         </month>
-        <month month="02" name="Февраль">
-            <holiday name="23-февраля" start="23"/>
-            <dayoff name="Выходной" start="12" finish="13"/>
-            <dayoff name="Выходной" start="19" finish="20"/>
-            <dayoff name="Выходной" start="26" finish="27"/>
+        <month month="02" name="Февраль" holiday_color="0090c9"  before_holiday_color="98dbf3">
+            <holiday kind="holiday" name="23-февраля" start="23"/>
+            <holiday kind="dayoff"  name="Выходной" start="2" finish="3"/>
+            <holiday kind="dayoff"  name="Выходной" start="9" finish="10"/>
+            <holiday kind="dayoff"  name="Выходной" start="16" finish="17"/>
+            <holiday kind="daybefore"  name="Предпраздничный" start="22"/>
+            <holiday kind="dayoff"  name="Выходной" start="24"/>
         </month>
-        
+        <month month="03" name="Март" holiday_color="00a669"  before_holiday_color="89d9b6">
+            <holiday kind="dayoff"  name="Выходной" start="2" finish="3"/>
+            <holiday kind="daybefore"  name="Предпраздничный" start="7"/>
+            <holiday kind="holiday"  name="Международный женский день" start="8" finish="10"/>
+            <holiday kind="dayoff"  name="Выходной" start="16" finish="17"/>
+            <holiday kind="dayoff"  name="Выходной" start="23" finish="24"/>
+            <holiday kind="dayoff"  name="Выходной" start="30" finish="31"/>
+        </month>
+        <month month="04" name="Апрель" holiday_color="50a122"  before_holiday_color="c1e697">
+            <holiday kind="dayoff"  name="Выходной" start="6" finish="7"/>
+            <holiday kind="dayoff"  name="Выходной" start="13" finish="14"/>
+            <holiday kind="dayoff"  name="Выходной" start="20" finish="21"/>
+            <holiday kind="dayoff"  name="Выходной" start="27" finish="28"/>
+            <holiday kind="daybefore"  name="Предпраздничный" start="30"/>
+        </month>
+        <month month="05" name="Май" holiday_color="ff9f00"  before_holiday_color="ffce80">
+            <holiday kind="holiday" name="Праздник Весны и Труда" start="1"/>
+            <holiday kind="dayoff"  name="Выходной" start="2" finish="5"/>
+            <holiday kind="daybefore"  name="Предпраздничный" start="8"/>
+            <holiday kind="holiday" name="День Победы" start="9"/>
+            <holiday kind="dayoff"  name="Выходной" start="10" finish="12"/>
+            <holiday kind="dayoff"  name="Выходной" start="18" finish="19"/>
+            <holiday kind="dayoff"  name="Выходной" start="25" finish="26"/>
+        </month>
+        <month month="06" name="Июнь" holiday_color="f27900"  before_holiday_color="f7b772">
+            <holiday kind="dayoff"  name="Выходной" start="1" finish="2"/>
+            <holiday kind="dayoff"  name="Выходной" start="8" finish="9"/>
+            <holiday kind="daybefore"  name="Предпраздничный" start="11"/>
+            <holiday kind="holiday" name="День России" start="12"/>
+            <holiday kind="dayoff"  name="Выходной" start="15" finish="16"/>
+            <holiday kind="dayoff"  name="Выходной" start="22" finish="23"/>
+            <holiday kind="dayoff"  name="Выходной" start="29" finish="30"/>
+        </month>
+        <month month="07" name="Июль" holiday_color="f26a52"  before_holiday_color="f26a52">
+            <holiday kind="dayoff"  name="Выходной" start="6" finish="7"/>
+            <holiday kind="dayoff"  name="Выходной" start="13" finish="14"/>
+            <holiday kind="dayoff"  name="Выходной" start="20" finish="21"/>
+            <holiday kind="dayoff"  name="Выходной" start="27" finish="28"/>
+        </month>
+        <month month="08" name="Август" holiday_color="e61e17"  before_holiday_color="e61e17">
+            <holiday kind="dayoff"  name="Выходной" start="3" finish="4"/>
+            <holiday kind="dayoff"  name="Выходной" start="10" finish="11"/>
+            <holiday kind="dayoff"  name="Выходной" start="17" finish="18"/>
+            <holiday kind="dayoff"  name="Выходной" start="24" finish="25"/>
+            <holiday kind="dayoff"  name="Выходной" start="31"/>
+        </month>
+        <month month="09" name="Сентябрь" holiday_color="eb2f83"  before_holiday_color="eb2f83">
+            <holiday kind="dayoff"  name="Выходной" start="1"/>
+            <holiday kind="dayoff"  name="Выходной" start="7" finish="8"/>
+            <holiday kind="dayoff"  name="Выходной" start="14" finish="15"/>
+            <holiday kind="dayoff"  name="Выходной" start="21" finish="22"/>
+            <holiday kind="dayoff"  name="Выходной" start="28" finish="29"/>
+        </month>
+        <month month="10" name="Октябрь" holiday_color="de1f5b"  before_holiday_color="de1f5b">
+            <holiday kind="dayoff"  name="Выходной" start="5" finish="6"/>
+            <holiday kind="dayoff"  name="Выходной" start="12" finish="13"/>
+            <holiday kind="dayoff"  name="Выходной" start="19" finish="20"/>
+            <holiday kind="dayoff"  name="Выходной" start="26" finish="27"/>
+        </month>
+        <month month="11" name="Ноябрь" holiday_color="8c158c"  before_holiday_color="8c158c    ">
+            <holiday kind="dayoff"  name="Выходной" start="2" finish="3"/>
+            <holiday kind="holiday" name="День народного единства" start="4"/>
+            <holiday kind="dayoff"  name="Выходной" start="9" finish="10"/>
+            <holiday kind="dayoff"  name="Выходной" start="16" finish="17"/>
+            <holiday kind="dayoff"  name="Выходной" start="23" finish="24"/>
+            <holiday kind="dayoff"  name="Выходной" start="30"/>
+        </month>
+        <month month="12" name="Декабрь" holiday_color="0256b0"  before_holiday_color="75adde">
+            <holiday kind="dayoff"  name="Выходной" start="1"/>
+            <holiday kind="dayoff"  name="Выходной" start="7" finish="8"/>
+            <holiday kind="dayoff"  name="Выходной" start="14" finish="15"/>
+            <holiday kind="dayoff"  name="Выходной" start="21" finish="22"/>
+            <holiday kind="dayoff"  name="Выходной" start="28" finish="29"/>
+            <holiday kind="daybefore"  name="Предпраздничный" start="31"/>
+        </month>
     </calendar>
-<calendars>
+</calendars>

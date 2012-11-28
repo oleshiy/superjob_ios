@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		7246BE991663FCBD00E01B9F /* Calendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246BE981663FCBD00E01B9F /* Calendar.m */; };
 		7246BE9C1663FCCD00E01B9F /* Month.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246BE9B1663FCCD00E01B9F /* Month.m */; };
-		7246BE9F1663FCE100E01B9F /* DayOfMonth.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246BE9E1663FCE100E01B9F /* DayOfMonth.m */; };
 		7246BEA21663FD8700E01B9F /* Holiday.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246BEA11663FD8700E01B9F /* Holiday.m */; };
-		7246BEA51663FD9500E01B9F /* DayOff.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246BEA41663FD9500E01B9F /* DayOff.m */; };
 		7246BEB716640F3800E01B9F /* downArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7246BEA716640F3800E01B9F /* downArrow.png */; };
 		7246BEB816640F3800E01B9F /* downArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7246BEA816640F3800E01B9F /* downArrow@2x.png */; };
 		7246BEB916640F3800E01B9F /* hDivider.png in Resources */ = {isa = PBXBuildFile; fileRef = 7246BEA916640F3800E01B9F /* hDivider.png */; };
@@ -63,6 +61,7 @@
 		72B4C60C1662AF22006DA90C /* CJViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72B4C60A1662AF22006DA90C /* CJViewController_iPhone.xib */; };
 		72B4C60F1662AF22006DA90C /* CJViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72B4C60D1662AF22006DA90C /* CJViewController_iPad.xib */; };
 		72B4C6171662AF8F006DA90C /* calendar.xml in Resources */ = {isa = PBXBuildFile; fileRef = 72B4C6161662AF8F006DA90C /* calendar.xml */; };
+		72F2C4CC166573530036FA8F /* UIColor+ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F2C4CB166573530036FA8F /* UIColor+ext.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,12 +69,8 @@
 		7246BE981663FCBD00E01B9F /* Calendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calendar.m; sourceTree = "<group>"; };
 		7246BE9A1663FCCD00E01B9F /* Month.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Month.h; sourceTree = "<group>"; };
 		7246BE9B1663FCCD00E01B9F /* Month.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Month.m; sourceTree = "<group>"; };
-		7246BE9D1663FCE100E01B9F /* DayOfMonth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayOfMonth.h; sourceTree = "<group>"; };
-		7246BE9E1663FCE100E01B9F /* DayOfMonth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayOfMonth.m; sourceTree = "<group>"; };
 		7246BEA01663FD8700E01B9F /* Holiday.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Holiday.h; sourceTree = "<group>"; };
 		7246BEA11663FD8700E01B9F /* Holiday.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Holiday.m; sourceTree = "<group>"; };
-		7246BEA31663FD9500E01B9F /* DayOff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayOff.h; sourceTree = "<group>"; };
-		7246BEA41663FD9500E01B9F /* DayOff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayOff.m; sourceTree = "<group>"; };
 		7246BEA716640F3800E01B9F /* downArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = downArrow.png; sourceTree = "<group>"; };
 		7246BEA816640F3800E01B9F /* downArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "downArrow@2x.png"; sourceTree = "<group>"; };
 		7246BEA916640F3800E01B9F /* hDivider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hDivider.png; sourceTree = "<group>"; };
@@ -154,6 +149,8 @@
 		72B4C60B1662AF22006DA90C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CJViewController_iPhone.xib; sourceTree = "<group>"; };
 		72B4C60E1662AF22006DA90C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CJViewController_iPad.xib; sourceTree = "<group>"; };
 		72B4C6161662AF8F006DA90C /* calendar.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = calendar.xml; sourceTree = "<group>"; };
+		72F2C4CA166573530036FA8F /* UIColor+ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ext.h"; sourceTree = "<group>"; };
+		72F2C4CB166573530036FA8F /* UIColor+ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ext.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,12 +174,8 @@
 				7246BE981663FCBD00E01B9F /* Calendar.m */,
 				7246BE9A1663FCCD00E01B9F /* Month.h */,
 				7246BE9B1663FCCD00E01B9F /* Month.m */,
-				7246BE9D1663FCE100E01B9F /* DayOfMonth.h */,
-				7246BE9E1663FCE100E01B9F /* DayOfMonth.m */,
 				7246BEA01663FD8700E01B9F /* Holiday.h */,
 				7246BEA11663FD8700E01B9F /* Holiday.m */,
-				7246BEA31663FD9500E01B9F /* DayOff.h */,
-				7246BEA41663FD9500E01B9F /* DayOff.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -331,6 +324,7 @@
 		72B4C5F51662AF22006DA90C /* CJCalendar */ = {
 			isa = PBXGroup;
 			children = (
+				72F2C4C9166573530036FA8F /* Helpers */,
 				7246BF09166418DF00E01B9F /* UI */,
 				7246BE951663FC9600E01B9F /* Model */,
 				72B4C5FE1662AF22006DA90C /* CJAppDelegate.h */,
@@ -367,6 +361,15 @@
 				72B4C6161662AF8F006DA90C /* calendar.xml */,
 			);
 			path = data;
+			sourceTree = "<group>";
+		};
+		72F2C4C9166573530036FA8F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				72F2C4CA166573530036FA8F /* UIColor+ext.h */,
+				72F2C4CB166573530036FA8F /* UIColor+ext.m */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -461,9 +464,7 @@
 				72B4C6091662AF22006DA90C /* CJViewController.m in Sources */,
 				7246BE991663FCBD00E01B9F /* Calendar.m in Sources */,
 				7246BE9C1663FCCD00E01B9F /* Month.m in Sources */,
-				7246BE9F1663FCE100E01B9F /* DayOfMonth.m in Sources */,
 				7246BEA21663FD8700E01B9F /* Holiday.m in Sources */,
-				7246BEA51663FD9500E01B9F /* DayOff.m in Sources */,
 				7246BEF9166410EB00E01B9F /* CXMLDocument_CreationExtensions.m in Sources */,
 				7246BEFA166410EB00E01B9F /* CXMLNode_CreationExtensions.m in Sources */,
 				7246BEFB166410EB00E01B9F /* CXHTMLDocument.m in Sources */,
@@ -484,6 +485,7 @@
 				7246BF2C16642DA400E01B9F /* KalLogic.m in Sources */,
 				7246BF2D16642DA400E01B9F /* MonthView.m in Sources */,
 				7246BF2E16642DA400E01B9F /* NSDateAdditions.m in Sources */,
+				72F2C4CC166573530036FA8F /* UIColor+ext.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
