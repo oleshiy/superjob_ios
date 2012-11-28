@@ -83,7 +83,9 @@
 	
 	monthScroll.contentSize = CGSizeMake(monthViewWidth * numberOfMonthes, monthViewHeight);
     
+    monthDetailsView.cal = calendar;
     [self updateMonthLabel];
+    
 }
 
 -(void) didSelectDate:(NSDate*)date
@@ -103,6 +105,7 @@
     // manage fonts
     [self replaceFontFamilyOnlabelsInView:monthDetailsView];
     [self replaceFontFamilyOnlabelsInView:calendarView];
+    [self replaceFontFamilyOnlabelsInView:controlsContainer];
     
     [self generateCalendar];
     
@@ -127,6 +130,11 @@
     [calendarView release];
     [monthScroll release];
     [monthTitle release];
+    [controlsContainer release];
+    [periodInfoLabel release];
+    [holidaysContainerView release];
+    [holidayDatesLabel release];
+    [holidayTitleLabel release];
     [super dealloc];
 }
 
@@ -143,6 +151,49 @@
     monthTitle.text = [NSString stringWithFormat:@"%@ %d", mv.month.name, mv.month.year];
     
     monthDetailsView.month = mv.month;
+    
+    periodInfoLabel.text = [NSString stringWithFormat:@"%d квартал, %d полугодие %d год", monthDetailsView.currentQuartal, monthDetailsView.currentHalf, mv.month.year];
+    
+    
+    NSArray* marked = [mv.month markedHolidays];
+    
+    holidaysContainerView.hidden = (marked.count == 0);
+    
+    if(!holidaysContainerView.hidden)
+    {
+        holidayDatesLabel.textColor = mv.month.holidayColor;
+        
+        NSMutableString* stDays = [NSMutableString string];
+        NSMutableString* stTitles = [NSMutableString string];
+        [stTitles appendString:@"— "];
+        NSUInteger cnt = 0;
+        for(Holiday* h in marked)
+        {
+            if(h.startDay == h.finishDay)
+                [stDays appendFormat:@"%d", h.startDay];
+            else if ((h.finishDay - h.startDay) > 1)
+                [stDays appendFormat:@"%d-%d", h.startDay, h.finishDay];
+            
+            [stTitles appendString:h.name];
+            ++cnt;
+            if(cnt != [marked count])
+            {
+                [stDays appendString:@", "];
+                [stTitles appendString:@", "];
+            }
+            
+            
+            
+        }
+        
+        holidayDatesLabel.text = stDays;
+        holidayTitleLabel.text = stTitles;
+
+        [holidayDatesLabel sizeToFit];
+        CGRect f = holidayTitleLabel.frame;
+        f.origin.x = holidayDatesLabel.frame.origin.x + holidayDatesLabel.frame.size.width + 5.0f;
+        holidayTitleLabel.frame = f;
+    }
     
 }
 
@@ -161,11 +212,31 @@
 {
     [self updateMonthLabel];
 }
-//actions
+
+#pragma mark - Actions
+
 - (IBAction)onInfoButton:(id)sender {
 }
 
 - (IBAction)onGotoProView:(id)sender {
+    
+    proViewVisible = !proViewVisible;
+
+    if(proViewVisible)
+        [monthDetailsView showAdditional:proViewVisible];
+
+    [UIView animateWithDuration:0.3f animations:^{
+
+        monthDetailsView.transform = CGAffineTransformMakeTranslation(0, -monthDetailsView.frame.origin.y);
+        controlsContainer.transform = CGAffineTransformMakeTranslation(0, (proViewVisible)?controlsContainer.frame.size.height:0);
+        
+    } completion:^(BOOL finished) {
+        if(finished && !proViewVisible)
+        {
+            [monthDetailsView showAdditional:proViewVisible];
+        }
+    }];
+    
 }
 
 - (IBAction)onNextMonth:(id)sender {
@@ -190,4 +261,17 @@
     [monthScroll setContentOffset:CGPointMake(newOffset, 0) animated:YES];
 }
 
+- (void)viewDidUnload {
+    [controlsContainer release];
+    controlsContainer = nil;
+    [periodInfoLabel release];
+    periodInfoLabel = nil;
+    [holidaysContainerView release];
+    holidaysContainerView = nil;
+    [holidayDatesLabel release];
+    holidayDatesLabel = nil;
+    [holidayTitleLabel release];
+    holidayTitleLabel = nil;
+    [super viewDidUnload];
+}
 @end

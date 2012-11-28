@@ -12,7 +12,7 @@
 #import "Holiday.h"
 
 @implementation Month
-@synthesize holidayColor, beforeHolidayColor, year, date, holidays, name, numberOfDays;
+@synthesize holidayColor, beforeHolidayColor, year, date, holidays, name, numberOfDays, monthNum;
 
 -(void) dealloc
 {
@@ -46,6 +46,9 @@
         self.holidayColor = [UIColor colorWithHexString:cl];
         
         NSString* stNum = [[el attributeForName:@"month"] stringValue];
+        
+        if(stNum)
+            monthNum = [stNum integerValue];
         
         self.name = [[el attributeForName:@"name"] stringValue];
         
@@ -86,6 +89,21 @@
     }
     
     return cntr;
+}
+
+// только праздники, без выходных
+-(NSArray*) markedHolidays
+{
+    NSMutableArray* marked = [NSMutableArray array];
+    for(Holiday* h in holidays)
+    {
+        if(h.kind == HKHoliday)
+        {
+            [marked addObject:h];
+        }
+    }
+    
+    return marked;
 }
 
 -(NSUInteger) shortDaysCount

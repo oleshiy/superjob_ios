@@ -30,6 +30,7 @@ const NSUInteger kNumberOfDateRows = 6;
     
     self = [super initWithFrame:frame];
 
+    BOOL isIpad = ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad);
     if (self) {
 
 		UIColor* shadowColor = [UIColor whiteColor];
@@ -48,7 +49,7 @@ const NSUInteger kNumberOfDateRows = 6;
 																   , 0
 																   , wd
 																   , 20)];
-			l.font = [UIFont systemFontOfSize:10.0f];
+			l.font = [UIFont systemFontOfSize:(isIpad)?14.0f:10.0f];
 			l.shadowOffset = CGSizeMake(0.0f, 1.0f);
 			l.shadowColor = shadowColor;
 			l.backgroundColor = [UIColor clearColor];
@@ -59,6 +60,7 @@ const NSUInteger kNumberOfDateRows = 6;
 			[self addSubview:l];
 			[l release];
 		}
+        
         // Initialization code.
 		for(NSUInteger row = 0; row <  kNumberOfDateRows; row++)
 		{
@@ -68,11 +70,11 @@ const NSUInteger kNumberOfDateRows = 6;
 				//btn.backgroundColor = [UIColor redColor];
 				btn.opaque = NO;
 				btn.frame = CGRectMake(self.frame.size.width * 0.5f - kNumberOfDateCols * wd * 0.5f + col * wd + 4
-									   , 16 + row * hg
+									   , ((isIpad)?20:16) + row * hg
 									   , wd - 5
 									   , hg - 5);
 				[btn setBackgroundImage:dateBgImg forState:UIControlStateNormal];
-				btn.titleLabel.font = [UIFont fontWithName:@"ProximaNova-Extrabld" size:22];
+				btn.titleLabel.font = [UIFont fontWithName:@"ProximaNova-Extrabld" size:(isIpad)?30:22];
 				[btn setTitleColor:hlTextColor forState:UIControlStateNormal];
 				[self addSubview:btn];
                 

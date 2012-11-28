@@ -34,6 +34,8 @@
         else if([stKind isEqualToString:@"daybefore"])
             kind = HKBeforeHoliday;
         
+        self.name = [[el attributeForName:@"name"] stringValue];
+        
         startDay = [[[el attributeForName:@"start"] stringValue] integerValue];
         
         CXMLNode* node = [el attributeForName:@"finish"];

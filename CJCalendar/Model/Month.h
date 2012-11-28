@@ -22,6 +22,7 @@
     NSString* name;
 
     NSUInteger numberOfDays;
+    NSUInteger monthNum;
 }
 
 @property (nonatomic, retain) UIColor* holidayColor;
@@ -30,11 +31,13 @@
 @property (nonatomic, retain) NSString* name;
 @property (nonatomic, readonly) NSDate* date;
 @property (readonly) NSUInteger year;
+@property (readonly) NSUInteger monthNum;
 @property (nonatomic) NSUInteger numberOfDays;
 
 -(id) initWithXml:(CXMLElement*)el  andYear:(NSUInteger)yearOfMonth;
 -(HolidayKind) holidayForDay:(NSUInteger)day;
 -(NSUInteger) holidaysCount;
 -(NSUInteger) shortDaysCount;
+-(NSArray*) markedHolidays;
 
 @end

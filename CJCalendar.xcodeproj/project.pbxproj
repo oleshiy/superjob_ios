@@ -586,6 +586,7 @@
 		72B4C6141662AF22006DA90C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Oksana Sukhorukova";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CJCalendar/CJCalendar-Prefix.pch";
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
@@ -593,6 +594,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B19613DE-4B98-4929-9FE7-2F0ABAC57E1D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
