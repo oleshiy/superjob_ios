@@ -16,12 +16,14 @@
 #import "Calendar.h"
 #import "Month.h"
 #import "MonthView.h"
+#import "CJInfoViewController.h"
 
 @interface CJViewController ()
 
 @end
 
 @implementation CJViewController
+
 
 -(void) replaceFontFamilyOnlabelsInView:(UIView*)view
 {
@@ -114,6 +116,11 @@
     
     f.origin.y = calendarView.frame.size.height + calendarView.frame.origin.y;
     monthDetailsView.frame = f;
+}
+
+-(void) viewWillAppear:(BOOL)animated
+{
+    self.navigationController.navigationBarHidden = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -216,6 +223,17 @@
 #pragma mark - Actions
 
 - (IBAction)onInfoButton:(id)sender {
+    
+    CJInfoViewController* vc = nil;
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        vc = [[CJInfoViewController alloc] initWithNibName:@"CJInfoViewController_iPhone" bundle:nil];
+    } else {
+        vc = [[CJInfoViewController alloc] initWithNibName:@"CJInfoViewController_iPad" bundle:nil];
+    }
+    [self replaceFontFamilyOnlabelsInView:vc.view];
+    [self.navigationController pushViewController:vc animated:YES];
+    [vc release];
+
 }
 
 - (IBAction)onGotoProView:(id)sender {

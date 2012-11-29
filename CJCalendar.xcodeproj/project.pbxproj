@@ -61,6 +61,30 @@
 		72B4C60C1662AF22006DA90C /* CJViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72B4C60A1662AF22006DA90C /* CJViewController_iPhone.xib */; };
 		72B4C60F1662AF22006DA90C /* CJViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72B4C60D1662AF22006DA90C /* CJViewController_iPad.xib */; };
 		72B4C6171662AF8F006DA90C /* calendar.xml in Resources */ = {isa = PBXBuildFile; fileRef = 72B4C6161662AF8F006DA90C /* calendar.xml */; };
+		72C7328B1667645400ABA4D3 /* CJInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C732891667645400ABA4D3 /* CJInfoViewController.m */; };
+		72C7328C1667645400ABA4D3 /* CJInfoViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72C7328A1667645400ABA4D3 /* CJInfoViewController_iPad.xib */; };
+		72C7328F1667648100ABA4D3 /* CJInfoViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72C7328E1667648100ABA4D3 /* CJInfoViewController_iPhone.xib */; };
+		72C732A41667691100ABA4D3 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 72C732911667691100ABA4D3 /* 1.png */; };
+		72C732A51667691100ABA4D3 /* 10m.png in Resources */ = {isa = PBXBuildFile; fileRef = 72C732921667691100ABA4D3 /* 10m.png */; };
+		72C732A61667691100ABA4D3 /* 10m@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72C732931667691100ABA4D3 /* 10m@2x.png */; };
+		72C732A71667691100ABA4D3 /* 1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72C732941667691100ABA4D3 /* 1@2x.png */; };
+		72C732A81667691100ABA4D3 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 72C732951667691100ABA4D3 /* 2.png */; };
+		72C732A91667691100ABA4D3 /* 25.png in Resources */ = {isa = PBXBuildFile; fileRef = 72C732961667691100ABA4D3 /* 25.png */; };
+		72C732AA1667691100ABA4D3 /* 25@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72C732971667691100ABA4D3 /* 25@2x.png */; };
+		72C732AB1667691100ABA4D3 /* 2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72C732981667691100ABA4D3 /* 2@2x.png */; };
+		72C732AC1667691100ABA4D3 /* 2m.png in Resources */ = {isa = PBXBuildFile; fileRef = 72C732991667691100ABA4D3 /* 2m.png */; };
+		72C732AD1667691100ABA4D3 /* 2m@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72C7329A1667691100ABA4D3 /* 2m@2x.png */; };
+		72C732AE1667691100ABA4D3 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 72C7329B1667691100ABA4D3 /* 3.png */; };
+		72C732AF1667691100ABA4D3 /* 3m.png in Resources */ = {isa = PBXBuildFile; fileRef = 72C7329C1667691100ABA4D3 /* 3m.png */; };
+		72C732B01667691100ABA4D3 /* 3m@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72C7329D1667691100ABA4D3 /* 3m@2x.png */; };
+		72C732B11667691100ABA4D3 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 72C7329E1667691100ABA4D3 /* 5.png */; };
+		72C732B21667691100ABA4D3 /* 5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72C7329F1667691100ABA4D3 /* 5@2x.png */; };
+		72C732B31667691100ABA4D3 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = 72C732A01667691100ABA4D3 /* 6.png */; };
+		72C732B41667691100ABA4D3 /* 6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72C732A11667691100ABA4D3 /* 6@2x.png */; };
+		72C732B51667691100ABA4D3 /* backBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 72C732A21667691100ABA4D3 /* backBtn.png */; };
+		72C732B61667691100ABA4D3 /* backBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72C732A31667691100ABA4D3 /* backBtn@2x.png */; };
+		72C732B916676D1E00ABA4D3 /* arrow1.png in Resources */ = {isa = PBXBuildFile; fileRef = 72C732B716676D1E00ABA4D3 /* arrow1.png */; };
+		72C732BA16676D1E00ABA4D3 /* arrow1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72C732B816676D1E00ABA4D3 /* arrow1@2x.png */; };
 		72F2C4CC166573530036FA8F /* UIColor+ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F2C4CB166573530036FA8F /* UIColor+ext.m */; };
 /* End PBXBuildFile section */
 
@@ -149,6 +173,31 @@
 		72B4C60B1662AF22006DA90C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CJViewController_iPhone.xib; sourceTree = "<group>"; };
 		72B4C60E1662AF22006DA90C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CJViewController_iPad.xib; sourceTree = "<group>"; };
 		72B4C6161662AF8F006DA90C /* calendar.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = calendar.xml; sourceTree = "<group>"; };
+		72C732881667645400ABA4D3 /* CJInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJInfoViewController.h; sourceTree = "<group>"; };
+		72C732891667645400ABA4D3 /* CJInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJInfoViewController.m; sourceTree = "<group>"; };
+		72C7328A1667645400ABA4D3 /* CJInfoViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJInfoViewController_iPad.xib; sourceTree = "<group>"; };
+		72C7328E1667648100ABA4D3 /* CJInfoViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CJInfoViewController_iPhone.xib; sourceTree = "<group>"; };
+		72C732911667691100ABA4D3 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		72C732921667691100ABA4D3 /* 10m.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10m.png; sourceTree = "<group>"; };
+		72C732931667691100ABA4D3 /* 10m@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "10m@2x.png"; sourceTree = "<group>"; };
+		72C732941667691100ABA4D3 /* 1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1@2x.png"; sourceTree = "<group>"; };
+		72C732951667691100ABA4D3 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		72C732961667691100ABA4D3 /* 25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 25.png; sourceTree = "<group>"; };
+		72C732971667691100ABA4D3 /* 25@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "25@2x.png"; sourceTree = "<group>"; };
+		72C732981667691100ABA4D3 /* 2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2@2x.png"; sourceTree = "<group>"; };
+		72C732991667691100ABA4D3 /* 2m.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2m.png; sourceTree = "<group>"; };
+		72C7329A1667691100ABA4D3 /* 2m@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2m@2x.png"; sourceTree = "<group>"; };
+		72C7329B1667691100ABA4D3 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		72C7329C1667691100ABA4D3 /* 3m.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3m.png; sourceTree = "<group>"; };
+		72C7329D1667691100ABA4D3 /* 3m@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3m@2x.png"; sourceTree = "<group>"; };
+		72C7329E1667691100ABA4D3 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
+		72C7329F1667691100ABA4D3 /* 5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "5@2x.png"; sourceTree = "<group>"; };
+		72C732A01667691100ABA4D3 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
+		72C732A11667691100ABA4D3 /* 6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "6@2x.png"; sourceTree = "<group>"; };
+		72C732A21667691100ABA4D3 /* backBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backBtn.png; sourceTree = "<group>"; };
+		72C732A31667691100ABA4D3 /* backBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backBtn@2x.png"; sourceTree = "<group>"; };
+		72C732B716676D1E00ABA4D3 /* arrow1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow1.png; sourceTree = "<group>"; };
+		72C732B816676D1E00ABA4D3 /* arrow1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow1@2x.png"; sourceTree = "<group>"; };
 		72F2C4CA166573530036FA8F /* UIColor+ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ext.h"; sourceTree = "<group>"; };
 		72F2C4CB166573530036FA8F /* UIColor+ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ext.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -183,6 +232,7 @@
 		7246BEA616640F3800E01B9F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				72C732901667691100ABA4D3 /* Info */,
 				7246BEA716640F3800E01B9F /* downArrow.png */,
 				7246BEA816640F3800E01B9F /* downArrow@2x.png */,
 				7246BEA916640F3800E01B9F /* hDivider.png */,
@@ -262,6 +312,10 @@
 				7246BF07166418CC00E01B9F /* CJMonthDetailsView.m */,
 				7246BF17166426E600E01B9F /* CJCalendarView.h */,
 				7246BF18166426E600E01B9F /* CJCalendarView.m */,
+				72C732881667645400ABA4D3 /* CJInfoViewController.h */,
+				72C732891667645400ABA4D3 /* CJInfoViewController.m */,
+				72C7328A1667645400ABA4D3 /* CJInfoViewController_iPad.xib */,
+				72C7328E1667648100ABA4D3 /* CJInfoViewController_iPhone.xib */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -363,6 +417,34 @@
 			path = data;
 			sourceTree = "<group>";
 		};
+		72C732901667691100ABA4D3 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				72C732B716676D1E00ABA4D3 /* arrow1.png */,
+				72C732B816676D1E00ABA4D3 /* arrow1@2x.png */,
+				72C732911667691100ABA4D3 /* 1.png */,
+				72C732921667691100ABA4D3 /* 10m.png */,
+				72C732931667691100ABA4D3 /* 10m@2x.png */,
+				72C732941667691100ABA4D3 /* 1@2x.png */,
+				72C732951667691100ABA4D3 /* 2.png */,
+				72C732961667691100ABA4D3 /* 25.png */,
+				72C732971667691100ABA4D3 /* 25@2x.png */,
+				72C732981667691100ABA4D3 /* 2@2x.png */,
+				72C732991667691100ABA4D3 /* 2m.png */,
+				72C7329A1667691100ABA4D3 /* 2m@2x.png */,
+				72C7329B1667691100ABA4D3 /* 3.png */,
+				72C7329C1667691100ABA4D3 /* 3m.png */,
+				72C7329D1667691100ABA4D3 /* 3m@2x.png */,
+				72C7329E1667691100ABA4D3 /* 5.png */,
+				72C7329F1667691100ABA4D3 /* 5@2x.png */,
+				72C732A01667691100ABA4D3 /* 6.png */,
+				72C732A11667691100ABA4D3 /* 6@2x.png */,
+				72C732A21667691100ABA4D3 /* backBtn.png */,
+				72C732A31667691100ABA4D3 /* backBtn@2x.png */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
 		72F2C4C9166573530036FA8F /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -449,6 +531,29 @@
 				7246BEC616640F3800E01B9F /* thinDivider.png in Resources */,
 				7246BF0D1664218800E01B9F /* ProximaNova-Reg.otf in Resources */,
 				7246BF0E1664218800E01B9F /* ProximaNova-Xbold.otf in Resources */,
+				72C7328C1667645400ABA4D3 /* CJInfoViewController_iPad.xib in Resources */,
+				72C7328F1667648100ABA4D3 /* CJInfoViewController_iPhone.xib in Resources */,
+				72C732A41667691100ABA4D3 /* 1.png in Resources */,
+				72C732A51667691100ABA4D3 /* 10m.png in Resources */,
+				72C732A61667691100ABA4D3 /* 10m@2x.png in Resources */,
+				72C732A71667691100ABA4D3 /* 1@2x.png in Resources */,
+				72C732A81667691100ABA4D3 /* 2.png in Resources */,
+				72C732A91667691100ABA4D3 /* 25.png in Resources */,
+				72C732AA1667691100ABA4D3 /* 25@2x.png in Resources */,
+				72C732AB1667691100ABA4D3 /* 2@2x.png in Resources */,
+				72C732AC1667691100ABA4D3 /* 2m.png in Resources */,
+				72C732AD1667691100ABA4D3 /* 2m@2x.png in Resources */,
+				72C732AE1667691100ABA4D3 /* 3.png in Resources */,
+				72C732AF1667691100ABA4D3 /* 3m.png in Resources */,
+				72C732B01667691100ABA4D3 /* 3m@2x.png in Resources */,
+				72C732B11667691100ABA4D3 /* 5.png in Resources */,
+				72C732B21667691100ABA4D3 /* 5@2x.png in Resources */,
+				72C732B31667691100ABA4D3 /* 6.png in Resources */,
+				72C732B41667691100ABA4D3 /* 6@2x.png in Resources */,
+				72C732B51667691100ABA4D3 /* backBtn.png in Resources */,
+				72C732B61667691100ABA4D3 /* backBtn@2x.png in Resources */,
+				72C732B916676D1E00ABA4D3 /* arrow1.png in Resources */,
+				72C732BA16676D1E00ABA4D3 /* arrow1@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +591,7 @@
 				7246BF2D16642DA400E01B9F /* MonthView.m in Sources */,
 				7246BF2E16642DA400E01B9F /* NSDateAdditions.m in Sources */,
 				72F2C4CC166573530036FA8F /* UIColor+ext.m in Sources */,
+				72C7328B1667645400ABA4D3 /* CJInfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

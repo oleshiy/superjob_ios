@@ -28,7 +28,7 @@
     } else {
         self.viewController = [[[CJViewController alloc] initWithNibName:@"CJViewController_iPad" bundle:nil] autorelease];
     }
-    self.window.rootViewController = self.viewController;
+    self.window.rootViewController = [[[UINavigationController alloc] initWithRootViewController:self.viewController] autorelease];
     [self.window makeKeyAndVisible];
     return YES;
 }

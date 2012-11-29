@@ -163,7 +163,7 @@
 										<int key="NSvFlags">292</int>
 										<string key="NSFrame">{{22, 11}, {45, 23}}</string>
 										<reference key="NSSuperview" ref="437245285"/>
-										<reference key="NSNextKeyView" ref="37218426"/>
+										<reference key="NSNextKeyView" ref="1054609411"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<bool key="IBUIOpaque">NO</bool>
 										<bool key="IBUIClipsSubviews">YES</bool>
@@ -184,6 +184,7 @@
 										<int key="NSvFlags">292</int>
 										<string key="NSFrame">{{74, 17}, {235, 15}}</string>
 										<reference key="NSSuperview" ref="437245285"/>
+										<reference key="NSNextKeyView" ref="37218426"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<bool key="IBUIOpaque">NO</bool>
 										<bool key="IBUIClipsSubviews">YES</bool>
@@ -240,7 +241,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{242, 5}, {39, 35}}</string>
 								<reference key="NSSuperview" ref="37218426"/>
-								<reference key="NSNextKeyView" ref="466609379"/>
+								<reference key="NSNextKeyView" ref="547837919"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -290,6 +291,30 @@
 								</object>
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 							</object>
+							<object class="IBUIButton" id="547837919">
+								<reference key="NSNextResponder" ref="37218426"/>
+								<int key="NSvFlags">292</int>
+								<string key="NSFrame">{{281, 4}, {39, 35}}</string>
+								<reference key="NSSuperview" ref="37218426"/>
+								<reference key="NSNextKeyView" ref="466609379"/>
+								<string key="NSReuseIdentifierKey">_NS:9</string>
+								<bool key="IBUIOpaque">NO</bool>
+								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+								<int key="IBUIContentHorizontalAlignment">0</int>
+								<int key="IBUIContentVerticalAlignment">0</int>
+								<reference key="IBUIHighlightedTitleColor" ref="432158917"/>
+								<object class="NSColor" key="IBUINormalTitleColor">
+									<int key="NSColorSpace">1</int>
+									<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
+								</object>
+								<reference key="IBUINormalTitleShadowColor" ref="216231750"/>
+								<object class="NSCustomResource" key="IBUINormalImage">
+									<string key="NSClassName">NSImage</string>
+									<string key="NSResourceName">infoButton.png</string>
+								</object>
+								<reference key="IBUIFontDescription" ref="860925278"/>
+								<reference key="IBUIFont" ref="721667767"/>
+							</object>
 						</array>
 						<string key="NSFrame">{{0, 459}, {320, 43}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
@@ -326,6 +351,7 @@
 								<int key="NSvFlags">269</int>
 								<string key="NSFrame">{{112, 19}, {208, 14}}</string>
 								<reference key="NSSuperview" ref="466609379"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -1348,6 +1374,7 @@
 								<int key="NSvFlags">294</int>
 								<string key="NSFrame">{{14, 306}, {305, 1}}</string>
 								<reference key="NSSuperview" ref="960792283"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -2065,6 +2092,15 @@
 					</object>
 					<int key="connectionID">260</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">onInfoButton:</string>
+						<reference key="source" ref="547837919"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">296</int>
+				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<array key="orderedObjects">
@@ -2541,6 +2577,7 @@
 						<array class="NSMutableArray" key="children">
 							<reference ref="340848719"/>
 							<reference ref="1024470355"/>
+							<reference ref="547837919"/>
 						</array>
 						<reference key="parent" ref="774585933"/>
 					</object>
@@ -2577,6 +2614,11 @@
 						<int key="objectID">289</int>
 						<reference key="object" ref="1054609411"/>
 						<reference key="parent" ref="437245285"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">294</int>
+						<reference key="object" ref="547837919"/>
+						<reference key="parent" ref="37218426"/>
 					</object>
 				</array>
 			</object>
@@ -2660,6 +2702,7 @@
 				<string key="286.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="288.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="289.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="294.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="6.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="8.CustomClassName">CJCalendarView</string>
 				<string key="8.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -2672,268 +2715,9 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">293</int>
+			<int key="maxID">296</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes">
-			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
-				<object class="IBPartialClassDescription">
-					<string key="className">CJCalendarView</string>
-					<string key="superclassName">UIView</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/CJCalendarView.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">CJMonthDetailsView</string>
-					<string key="superclassName">UIView</string>
-					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="additionalDetailsContainer">UIView</string>
-						<string key="halfYearTitleLabel">UILabel</string>
-						<string key="halfyear36hrsLabel">UILabel</string>
-						<string key="halfyear40hrsLabel">UILabel</string>
-						<string key="halfyearHolidaysLabel">UILabel</string>
-						<string key="halfyearToalDaysLabel">UILabel</string>
-						<string key="halfyearWorkDaysLabel">UILabel</string>
-						<string key="halfyer20hrsLabel">UILabel</string>
-						<string key="hideBtn">UIButton</string>
-						<string key="holidaysLabel">UILabel</string>
-						<string key="monthTitle">UILabel</string>
-						<string key="quart20hrsLabel">UILabel</string>
-						<string key="quart36hrsLabel">UILabel</string>
-						<string key="quart40hrsLabel">UILabel</string>
-						<string key="quartHolidaysLabel">UILabel</string>
-						<string key="quartTitleLabel">UILabel</string>
-						<string key="quartTotalDaysLabel">UILabel</string>
-						<string key="quartWorkDaysLabel">UILabel</string>
-						<string key="totalDaysLabel">UILabel</string>
-						<string key="week20hrsLabel">UILabel</string>
-						<string key="week36hrsLabel">UILabel</string>
-						<string key="week40hrsLabel">UILabel</string>
-						<string key="workDaysLabel">UILabel</string>
-						<string key="year20hrslabel">UILabel</string>
-						<string key="year36hrsLabel">UILabel</string>
-						<string key="year40hrsLabel">UILabel</string>
-						<string key="yearHolidaysLabel">UILabel</string>
-						<string key="yearTitleLabel">UILabel</string>
-						<string key="yearTotalDaysLabel">UILabel</string>
-						<string key="yearWorkDaysLabel">UILabel</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="additionalDetailsContainer">
-							<string key="name">additionalDetailsContainer</string>
-							<string key="candidateClassName">UIView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="halfYearTitleLabel">
-							<string key="name">halfYearTitleLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="halfyear36hrsLabel">
-							<string key="name">halfyear36hrsLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="halfyear40hrsLabel">
-							<string key="name">halfyear40hrsLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="halfyearHolidaysLabel">
-							<string key="name">halfyearHolidaysLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="halfyearToalDaysLabel">
-							<string key="name">halfyearToalDaysLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="halfyearWorkDaysLabel">
-							<string key="name">halfyearWorkDaysLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="halfyer20hrsLabel">
-							<string key="name">halfyer20hrsLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="hideBtn">
-							<string key="name">hideBtn</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="holidaysLabel">
-							<string key="name">holidaysLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="monthTitle">
-							<string key="name">monthTitle</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="quart20hrsLabel">
-							<string key="name">quart20hrsLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="quart36hrsLabel">
-							<string key="name">quart36hrsLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="quart40hrsLabel">
-							<string key="name">quart40hrsLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="quartHolidaysLabel">
-							<string key="name">quartHolidaysLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="quartTitleLabel">
-							<string key="name">quartTitleLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="quartTotalDaysLabel">
-							<string key="name">quartTotalDaysLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="quartWorkDaysLabel">
-							<string key="name">quartWorkDaysLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="totalDaysLabel">
-							<string key="name">totalDaysLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="week20hrsLabel">
-							<string key="name">week20hrsLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="week36hrsLabel">
-							<string key="name">week36hrsLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="week40hrsLabel">
-							<string key="name">week40hrsLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="workDaysLabel">
-							<string key="name">workDaysLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="year20hrslabel">
-							<string key="name">year20hrslabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="year36hrsLabel">
-							<string key="name">year36hrsLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="year40hrsLabel">
-							<string key="name">year40hrsLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="yearHolidaysLabel">
-							<string key="name">yearHolidaysLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="yearTitleLabel">
-							<string key="name">yearTitleLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="yearTotalDaysLabel">
-							<string key="name">yearTotalDaysLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="yearWorkDaysLabel">
-							<string key="name">yearWorkDaysLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/CJMonthDetailsView.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">CJViewController</string>
-					<string key="superclassName">UIViewController</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="onGotoProView:">id</string>
-						<string key="onInfoButton:">id</string>
-						<string key="onNextMonth:">id</string>
-						<string key="onPrevMonth:">id</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="onGotoProView:">
-							<string key="name">onGotoProView:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="onInfoButton:">
-							<string key="name">onInfoButton:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="onNextMonth:">
-							<string key="name">onNextMonth:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="onPrevMonth:">
-							<string key="name">onPrevMonth:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="calendarView">CJCalendarView</string>
-						<string key="controlsContainer">UIView</string>
-						<string key="holidayDatesLabel">UILabel</string>
-						<string key="holidayTitleLabel">UILabel</string>
-						<string key="holidaysContainerView">UIView</string>
-						<string key="monthDetailsView">CJMonthDetailsView</string>
-						<string key="monthScroll">UIScrollView</string>
-						<string key="monthTitle">UILabel</string>
-						<string key="periodInfoLabel">UILabel</string>
-						<string key="ribbonView">UIImageView</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="calendarView">
-							<string key="name">calendarView</string>
-							<string key="candidateClassName">CJCalendarView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="controlsContainer">
-							<string key="name">controlsContainer</string>
-							<string key="candidateClassName">UIView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="holidayDatesLabel">
-							<string key="name">holidayDatesLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="holidayTitleLabel">
-							<string key="name">holidayTitleLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="holidaysContainerView">
-							<string key="name">holidaysContainerView</string>
-							<string key="candidateClassName">UIView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="monthDetailsView">
-							<string key="name">monthDetailsView</string>
-							<string key="candidateClassName">CJMonthDetailsView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="monthScroll">
-							<string key="name">monthScroll</string>
-							<string key="candidateClassName">UIScrollView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="monthTitle">
-							<string key="name">monthTitle</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="periodInfoLabel">
-							<string key="name">periodInfoLabel</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="ribbonView">
-							<string key="name">ribbonView</string>
-							<string key="candidateClassName">UIImageView</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/CJViewController.h</string>
-					</object>
-				</object>
-			</array>
-		</object>
+		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
@@ -2941,6 +2725,7 @@
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="downArrow.png">{12, 16}</string>
 			<string key="hDivider.png">{2, 2}</string>
+			<string key="infoButton.png">{20, 20}</string>
 			<string key="leftArrow.png">{12, 17}</string>
 			<string key="ribbon.png">{7, 14}</string>
 			<string key="rightArrow.png">{12, 17}</string>
