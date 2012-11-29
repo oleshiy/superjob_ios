@@ -16,7 +16,6 @@
 #import "Calendar.h"
 #import "Month.h"
 #import "MonthView.h"
-#import "CJInfoViewController.h"
 
 @interface CJViewController ()
 
@@ -222,6 +221,11 @@
 
 #pragma mark - Actions
 
+- (void)infoViewControllerDidFinish:(CJInfoViewController *)controller
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 - (IBAction)onInfoButton:(id)sender {
     
     CJInfoViewController* vc = nil;
@@ -231,7 +235,11 @@
         vc = [[CJInfoViewController alloc] initWithNibName:@"CJInfoViewController_iPad" bundle:nil];
     }
     [self replaceFontFamilyOnlabelsInView:vc.view];
-    [self.navigationController pushViewController:vc animated:YES];
+    
+    vc.delegate = self;
+    vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentViewController:vc animated:YES completion:nil];
+
     [vc release];
 
 }

@@ -56,6 +56,8 @@
     
     NSUInteger currentQuartal;
     NSUInteger currentHalf;
+    
+    NSNumberFormatter* numberFormatter;
 }
 
 @property (readonly) NSUInteger currentQuartal;

@@ -47,6 +47,7 @@
     [year40hrsLabel release];
     [year36hrsLabel release];
     [year20hrslabel release];
+    [numberFormatter release];
     [super dealloc];
 }
 
@@ -57,6 +58,16 @@
         // Initialization code
     }
     return self;
+}
+
+-(void) awakeFromNib
+{
+    numberFormatter = [[NSNumberFormatter alloc] init];
+    numberFormatter.groupingSeparator = @" ";
+    [numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
+    numberFormatter.groupingSize = 3;
+    numberFormatter.usesGroupingSeparator = YES;
+    numberFormatter.decimalSeparator = @",";
 }
 
 -(void) calculateHalfYearEstimates
@@ -93,16 +104,16 @@
         
         week40 +=  workdays / 5.0f * 40.0f - shortdays;
         week36 +=   workdays / 5.0f * 36.0f - shortdays;
-        week20 += workdays / 5.0f * 20.0f - shortdays;
+        week20 += workdays / 5.0f * 24.0f - shortdays;
     }
     
     halfyearToalDaysLabel.text = [NSString stringWithFormat:@"%d", totalDays];
     halfyearHolidaysLabel.text = [NSString stringWithFormat:@"%d", totalHolidays];
     halfyearWorkDaysLabel.text = [NSString stringWithFormat:@"%d", totalWorkDays];
     
-    halfyear40hrsLabel.text = [NSString stringWithFormat:@"%g", week40];
-    halfyear36hrsLabel.text = [NSString stringWithFormat:@"%g", week36];
-    halfyer20hrsLabel.text = [NSString stringWithFormat:@"%g", week20];
+    halfyear40hrsLabel.text = [numberFormatter stringFromNumber:[NSNumber numberWithDouble: week40]];
+    halfyear36hrsLabel.text = [numberFormatter stringFromNumber:[NSNumber numberWithDouble: week36]];
+    halfyer20hrsLabel.text = [numberFormatter stringFromNumber:[NSNumber numberWithDouble: week20]];
 
 }
 
@@ -140,16 +151,16 @@
         
         week40 +=  workdays / 5.0f * 40.0f - shortdays;
         week36 +=   workdays / 5.0f * 36.0f - shortdays;
-        week20 += workdays / 5.0f * 20.0f - shortdays;
+        week20 += workdays / 5.0f * 24.0f - shortdays;
     }
     
     quartTotalDaysLabel.text = [NSString stringWithFormat:@"%d", totalDays];
     quartHolidaysLabel.text = [NSString stringWithFormat:@"%d", totalHolidays];
     quartWorkDaysLabel.text = [NSString stringWithFormat:@"%d", totalWorkDays];
     
-    quart40hrsLabel.text = [NSString stringWithFormat:@"%g", week40];
-    quart36hrsLabel.text = [NSString stringWithFormat:@"%g", week36];
-    quart20hrsLabel.text = [NSString stringWithFormat:@"%g", week20];
+    quart40hrsLabel.text = [numberFormatter stringFromNumber:[NSNumber numberWithDouble: week40]];
+    quart36hrsLabel.text = [numberFormatter stringFromNumber:[NSNumber numberWithDouble: week36]];
+    quart20hrsLabel.text = [numberFormatter stringFromNumber:[NSNumber numberWithDouble: week20]];
     
 }
 
@@ -178,16 +189,16 @@
         
         week40 +=  workdays / 5.0f * 40.0f - shortdays;
         week36 +=   workdays / 5.0f * 36.0f - shortdays;
-        week20 += workdays / 5.0f * 20.0f - shortdays;
+        week20 += workdays / 5.0f * 24.0f - shortdays;
     }
     
     yearTotalDaysLabel.text = [NSString stringWithFormat:@"%d", totalDays];
     yearHolidaysLabel.text = [NSString stringWithFormat:@"%d", totalHolidays];
     yearWorkDaysLabel.text = [NSString stringWithFormat:@"%d", totalWorkDays];
     
-    year40hrsLabel.text = [NSString stringWithFormat:@"%g", week40];
-    year36hrsLabel.text = [NSString stringWithFormat:@"%g", week36];
-    year20hrslabel.text = [NSString stringWithFormat:@"%g", week20];
+    year40hrsLabel.text = [numberFormatter stringFromNumber:[NSNumber numberWithFloat: week40]];
+    year36hrsLabel.text = [numberFormatter stringFromNumber:[NSNumber numberWithFloat: week36]];
+    year20hrslabel.text = [numberFormatter stringFromNumber:[NSNumber numberWithFloat: week20]];
 }
 
 -(void) setCal:(Calendar *)val
@@ -215,9 +226,9 @@
     NSUInteger shortdays = [month shortDaysCount];
     workDaysLabel.text = [NSString stringWithFormat:@"%d", workdays];
     
-    week40hrsLabel.text = [NSString stringWithFormat:@"%g", workdays / 5.0f * 40.0f - shortdays];
-    week36hrsLabel.text = [NSString stringWithFormat:@"%g", workdays / 5.0f * 36.0f - shortdays];
-    week20hrsLabel.text = [NSString stringWithFormat:@"%g", workdays / 5.0f * 20.0f - shortdays];
+    week40hrsLabel.text = [numberFormatter stringFromNumber:[NSNumber numberWithDouble: workdays / 5.0f * 40.0f - shortdays]];
+    week36hrsLabel.text = [numberFormatter stringFromNumber:[NSNumber numberWithDouble: workdays / 5.0f * 36.0f - shortdays]];
+    week20hrsLabel.text = [numberFormatter stringFromNumber:[NSNumber numberWithDouble: workdays / 5.0f * 24.0f - shortdays]];
     
     [self calculateQuartalEstimates];
     [self calculateHalfYearEstimates];

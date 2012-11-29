@@ -37,7 +37,7 @@ const NSUInteger kNumberOfDateRows = 6;
 		UIColor* hlTextColor = [UIColor blackColor];
 		NSMutableArray* tempButtons = [[NSMutableArray alloc] init];
 		UIImage* dateBgImg = [UIImage imageNamed:@"square.png"];
-		CGFloat wd = (self.frame.size.width - 40) / kNumberOfDateCols;
+		CGFloat wd = (self.frame.size.width - 32) / kNumberOfDateCols;
 		CGFloat hg = (self.frame.size.height - 16) / kNumberOfDateRows;
 
 		NSArray* dow = [NSArray arrayWithObjects:@"пн",@"вт",@"ср",@"чт",@"пт",@"сб",@"вс",nil];
@@ -69,9 +69,9 @@ const NSUInteger kNumberOfDateRows = 6;
 				DateButton* btn = [DateButton buttonWithType:UIButtonTypeCustom];
 				//btn.backgroundColor = [UIColor redColor];
 				btn.opaque = NO;
-				btn.frame = CGRectMake(self.frame.size.width * 0.5f - kNumberOfDateCols * wd * 0.5f + col * wd + 4
+				btn.frame = CGRectMake(self.frame.size.width * 0.5f - kNumberOfDateCols * wd * 0.5f + col * wd + 3
 									   , ((isIpad)?20:16) + row * hg
-									   , wd - 5
+									   , wd - 7
 									   , hg - 5);
 				[btn setBackgroundImage:dateBgImg forState:UIControlStateNormal];
 				btn.titleLabel.font = [UIFont fontWithName:@"ProximaNova-Extrabld" size:(isIpad)?30:22];

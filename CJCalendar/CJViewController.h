@@ -9,12 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "CJCalendarView.h"
 #import "MonthView.h"
+#import "CJInfoViewController.h"
 
 @class CJMonthDetailsView;
 @class KalLogic;
 @class Calendar;
 
-@interface CJViewController : UIViewController<MonthViewDelegate>
+@interface CJViewController : UIViewController<MonthViewDelegate, CJInfoViewControllerDelegate>
 {
     @private
     IBOutlet UIImageView *ribbonView;

@@ -8,10 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+@class CJInfoViewController;
+
+@protocol CJInfoViewControllerDelegate
+- (void)infoViewControllerDidFinish:(CJInfoViewController *)controller;
+@end
+
 @interface CJInfoViewController : UIViewController
 {
-    
 }
 
+@property (assign, nonatomic) id <CJInfoViewControllerDelegate> delegate;
+
 - (IBAction)onBack:(id)sender;
+
 @end

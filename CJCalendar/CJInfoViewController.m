@@ -39,4 +39,10 @@
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
+
+-(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.delegate infoViewControllerDidFinish:self];
+}
+
 @end
