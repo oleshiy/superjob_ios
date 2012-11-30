@@ -149,7 +149,13 @@
     [self.view insertSubview:monthDetailsView aboveSubview:calendarView];
     CGRect f = monthDetailsView.frame;
     
-    f.origin.y = calendarView.frame.size.height + calendarView.frame.origin.y;
+    BOOL isRetina4 = NO;
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        if ([UIScreen mainScreen].bounds.size.height > 480.0f) {
+            isRetina4 = YES;
+        }
+    }
+    f.origin.y = calendarView.frame.size.height + calendarView.frame.origin.y - ((isRetina4)?10:0);
     monthDetailsView.frame = f;
 }
 

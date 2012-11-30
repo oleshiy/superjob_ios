@@ -237,7 +237,7 @@
 
 -(void) showAdditional:(BOOL)willShow
 {
-    additionalDetailsContainer.hidden = !willShow;
+//    additionalDetailsContainer.hidden = !willShow;
     hideBtn.hidden = !willShow;
     
 }
