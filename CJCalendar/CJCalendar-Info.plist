@@ -28,6 +28,7 @@
 	<array>
 		<string>ProximaNova-Reg.otf</string>
 		<string>ProximaNova-Xbold.otf</string>
+		<string>ProximaNova-Bold.otf</string>
 	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>

@@ -37,7 +37,7 @@ const NSUInteger kNumberOfDateRows = 6;
 		UIColor* hlTextColor = [UIColor blackColor];
 		NSMutableArray* tempButtons = [[NSMutableArray alloc] init];
 		UIImage* dateBgImg = [UIImage imageNamed:@"square.png"];
-		CGFloat wd = (self.frame.size.width - 32) / kNumberOfDateCols;
+		CGFloat wd = ceil((self.frame.size.width - 40) / kNumberOfDateCols) + 1;
 		CGFloat hg = (self.frame.size.height - 16) / kNumberOfDateRows;
 
 		NSArray* dow = [NSArray arrayWithObjects:@"пн",@"вт",@"ср",@"чт",@"пт",@"сб",@"вс",nil];
@@ -45,9 +45,9 @@ const NSUInteger kNumberOfDateRows = 6;
 		
 		for(NSUInteger col = 0; col < 7; col++)
 		{
-			UILabel* l = [[UILabel alloc] initWithFrame:CGRectMake(self.frame.size.width * 0.5f - kNumberOfDateCols * wd * 0.5f + col * wd
+			UILabel* l = [[UILabel alloc] initWithFrame:CGRectMake(20 + col * wd
 																   , 0
-																   , wd
+																   , wd - 5
 																   , 20)];
 			l.font = [UIFont systemFontOfSize:(isIpad)?14.0f:10.0f];
 			l.shadowOffset = CGSizeMake(0.0f, 1.0f);
@@ -69,9 +69,9 @@ const NSUInteger kNumberOfDateRows = 6;
 				DateButton* btn = [DateButton buttonWithType:UIButtonTypeCustom];
 				//btn.backgroundColor = [UIColor redColor];
 				btn.opaque = NO;
-				btn.frame = CGRectMake(self.frame.size.width * 0.5f - kNumberOfDateCols * wd * 0.5f + col * wd + 3
+				btn.frame = CGRectMake(20 + col * wd
 									   , ((isIpad)?20:16) + row * hg
-									   , wd - 7
+									   , wd - 5
 									   , hg - 5);
 				[btn setBackgroundImage:dateBgImg forState:UIControlStateNormal];
 				btn.titleLabel.font = [UIFont fontWithName:@"ProximaNova-Extrabld" size:(isIpad)?30:22];
@@ -79,6 +79,7 @@ const NSUInteger kNumberOfDateRows = 6;
 				[self addSubview:btn];
                 
                 btn.showsTouchWhenHighlighted = YES;
+                btn.contentEdgeInsets = UIEdgeInsetsMake(0, 0, -1, 0);
                 
                 btn.backgroundColor = [UIColor colorWithRed:231/255.0f green:237/255.0f blue:239/255.0f alpha:1.0f];
                 btn.layer.shouldRasterize = YES;

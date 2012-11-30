@@ -16,6 +16,7 @@
 
 @interface CJInfoViewController : UIViewController
 {
+    IBOutlet UIImageView *ribbonView;
 }
 
 @property (assign, nonatomic) id <CJInfoViewControllerDelegate> delegate;

@@ -35,8 +35,15 @@
         {
             UIFont* f = l.font;
             CGFloat sz = f.pointSize;
+    
+            NSString* fontName = @"ProximaNova-Regular";
             
-            UIFont* fnt = [UIFont fontWithName:(l.tag)?@"ProximaNova-Extrabld":@"ProximaNova-Regular" size:sz];
+            if(l.tag == 1)
+                fontName = @"ProximaNova-Extrabld";
+            else if(l.tag == 2)
+                fontName = @"ProximaNova-Bold";
+    
+            UIFont* fnt = [UIFont fontWithName:fontName size:sz];
             l.font = fnt;
         }
         
@@ -94,9 +101,38 @@
     
 }
 
+#if TARGET_IPHONE_SIMULATOR
+-(void) listOfFonts
+{
+    // List all fonts on iPhone
+    NSArray *familyNames = [[NSArray alloc] initWithArray:[UIFont familyNames]];
+    NSArray *fontNames;
+    NSInteger indFamily, indFont;
+    for (indFamily=0; indFamily<[familyNames count]; ++indFamily)
+    {
+        NSLog(@"Family name: %@", [familyNames objectAtIndex:indFamily]);
+        fontNames = [[NSArray alloc] initWithArray:
+                     [UIFont fontNamesForFamilyName:
+                      [familyNames objectAtIndex:indFamily]]];
+        for (indFont=0; indFont<[fontNames count]; ++indFont)
+        {
+            NSLog(@"    Font name: %@", [fontNames objectAtIndex:indFont]);
+        }
+        [fontNames release];
+    }
+    [familyNames release];
+    
+    
+}
+#endif
 
 - (void)viewDidLoad
 {
+    
+#if TARGET_IPHONE_SIMULATOR
+    [self listOfFonts];
+#endif
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     

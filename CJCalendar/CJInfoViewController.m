@@ -27,6 +27,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    UIImage* ribbonImage = [UIImage imageNamed:@"ribbon.png"];
+    ribbonView.image = [ribbonImage stretchableImageWithLeftCapWidth:20 topCapHeight:0];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,4 +49,13 @@
     [self.delegate infoViewControllerDidFinish:self];
 }
 
+- (void)dealloc {
+    [ribbonView release];
+    [super dealloc];
+}
+- (void)viewDidUnload {
+    [ribbonView release];
+    ribbonView = nil;
+    [super viewDidUnload];
+}
 @end
