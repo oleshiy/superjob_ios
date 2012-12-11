@@ -10,16 +10,18 @@
 #import "CJCalendarView.h"
 #import "MonthView.h"
 #import "CJInfoViewController.h"
+#import "CJMonthDetailsView.h"
 
 @class CJMonthDetailsView;
 @class KalLogic;
 @class Calendar;
 
-@interface CJViewController : UIViewController<MonthViewDelegate, CJInfoViewControllerDelegate>
+@interface CJViewController : UIViewController<MonthViewDelegate, CJInfoViewControllerDelegate, DetailsViewDelegate>
 {
     @private
     IBOutlet UIImageView *ribbonView;
     IBOutlet CJMonthDetailsView *monthDetailsView;
+    IBOutlet CJMonthDetailsView *monthDetailsViewRetina4;
     IBOutlet CJCalendarView *calendarView;
     IBOutlet UIScrollView *monthScroll;
     IBOutlet UILabel *monthTitle;
@@ -35,6 +37,7 @@
     NSUInteger calculatedOffset;
     
     BOOL proViewVisible;
+    BOOL isRetina4;
 }
 
 - (IBAction)onInfoButton:(id)sender;

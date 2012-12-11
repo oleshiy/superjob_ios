@@ -11,7 +11,7 @@
 #import "Calendar.h"
 
 @implementation CJMonthDetailsView
-@synthesize month, cal, currentHalf, currentQuartal;
+@synthesize month, cal, currentHalf, currentQuartal, delegate;
 
 -(void) dealloc
 {
@@ -48,6 +48,14 @@
     [year36hrsLabel release];
     [year20hrslabel release];
     [numberFormatter release];
+    [week40dimLabel release];
+    [quartWeek40dimLabel release];
+    [halfyearWeek40dimLabel release];
+    [yearWeek40dimLabel release];
+    [workDaysDimlabel release];
+    [quartWorkDaysDimlabel release];
+    [halfyearWorkDaysDimlabel release];
+    [yearWorkDaysDimlabel release];
     [super dealloc];
 }
 
@@ -60,6 +68,31 @@
     return self;
 }
 
+-(void) updateDimFrame:(UILabel*)dimLabel valuelabel:(UILabel*)valueLabel
+{
+    [valueLabel sizeToFit];
+    
+    CGRect f = valueLabel.frame;
+    CGRect f1 = dimLabel.frame;
+    
+    f1.origin.x = f.origin.x + f.size.width + 3.0f;
+    dimLabel.frame = f1;
+}
+
+-(void) updateDimFrame:(UILabel*)dimLabel valuelabel:(UILabel*)valueLabel dayValue:(float)val
+{
+    [self updateDimFrame:dimLabel valuelabel:valueLabel];
+    
+    int mod10 = (int)val % 10;
+
+    if(mod10 == 1)
+        dimLabel.text = @"день";
+    else if(mod10 < 5 && mod10 > 1)
+        dimLabel.text = @"дня";
+    else
+        dimLabel.text = @"дней";    
+}
+
 -(void) awakeFromNib
 {
     numberFormatter = [[NSNumberFormatter alloc] init];
@@ -68,13 +101,16 @@
     numberFormatter.groupingSize = 3;
     numberFormatter.usesGroupingSeparator = YES;
     numberFormatter.decimalSeparator = @",";
+    
+    initialFrame = CGRectNull;
+    
 }
 
 -(void) calculateHalfYearEstimates
 {
     currentHalf  = ((month.monthNum - 1) / 6) + 1;
     
-    halfYearTitleLabel.text = [NSString stringWithFormat:@"%d полугодие %d", currentHalf, month.year];
+    halfYearTitleLabel.text = [NSString stringWithFormat:@"%d полугодие", currentHalf];
     
     float week40 = 0.0;
     float week36 = 0.0;
@@ -115,13 +151,15 @@
     halfyear36hrsLabel.text = [numberFormatter stringFromNumber:[NSNumber numberWithDouble: week36]];
     halfyer20hrsLabel.text = [numberFormatter stringFromNumber:[NSNumber numberWithDouble: week20]];
 
+    [self updateDimFrame:halfyearWeek40dimLabel valuelabel:halfyear40hrsLabel];
+    [self updateDimFrame:halfyearWorkDaysDimlabel valuelabel:halfyearToalDaysLabel dayValue:totalDays];
 }
 
 -(void) calculateQuartalEstimates
 {
     currentQuartal  = ((month.monthNum - 1) / 3) + 1;
 
-    quartTitleLabel.text = [NSString stringWithFormat:@"%d квартал %d", currentQuartal, month.year];
+    quartTitleLabel.text = [NSString stringWithFormat:@"%d квартал", currentQuartal];
     
     float week40 = 0.0;
     float week36 = 0.0;
@@ -162,6 +200,9 @@
     quart36hrsLabel.text = [numberFormatter stringFromNumber:[NSNumber numberWithDouble: week36]];
     quart20hrsLabel.text = [numberFormatter stringFromNumber:[NSNumber numberWithDouble: week20]];
     
+    [self updateDimFrame:quartWeek40dimLabel valuelabel:quart40hrsLabel];
+    [self updateDimFrame:quartWorkDaysDimlabel valuelabel:quartTotalDaysLabel dayValue:totalDays];
+
 }
 
 -(void) calculateYearEstimates
@@ -199,6 +240,9 @@
     year40hrsLabel.text = [numberFormatter stringFromNumber:[NSNumber numberWithFloat: week40]];
     year36hrsLabel.text = [numberFormatter stringFromNumber:[NSNumber numberWithFloat: week36]];
     year20hrslabel.text = [numberFormatter stringFromNumber:[NSNumber numberWithFloat: week20]];
+
+    [self updateDimFrame:yearWeek40dimLabel valuelabel:year40hrsLabel];
+    [self updateDimFrame:yearWorkDaysDimlabel valuelabel:yearTotalDaysLabel dayValue:totalDays];
 }
 
 -(void) setCal:(Calendar *)val
@@ -210,13 +254,14 @@
     [self calculateYearEstimates];
 }
 
+
 -(void) setMonth:(Month *)val
 {
     [val retain];
     [month release];
     month = val;
-    
-    monthTitle.text = [NSString stringWithFormat:@"%@ %d", month.name, month.year];
+        
+    monthTitle.text = [NSString stringWithFormat:@"%@", month.name];
     
     totalDaysLabel.text = [NSString stringWithFormat:@"%d", month.numberOfDays];
     NSUInteger hc = [month holidaysCount];
@@ -229,6 +274,10 @@
     week40hrsLabel.text = [numberFormatter stringFromNumber:[NSNumber numberWithDouble: workdays / 5.0f * 40.0f - shortdays]];
     week36hrsLabel.text = [numberFormatter stringFromNumber:[NSNumber numberWithDouble: workdays / 5.0f * 36.0f - shortdays]];
     week20hrsLabel.text = [numberFormatter stringFromNumber:[NSNumber numberWithDouble: workdays / 5.0f * 24.0f - shortdays]];
+
+    [self updateDimFrame:week40dimLabel valuelabel:week40hrsLabel];
+    [self updateDimFrame:workDaysDimlabel valuelabel:totalDaysLabel dayValue:month.numberOfDays];
+    
     
     [self calculateQuartalEstimates];
     [self calculateHalfYearEstimates];
@@ -250,5 +299,60 @@
     // Drawing code
 }
 */
+
+-(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch = [[event allTouches] anyObject];
+    
+    lastLocation = [touch locationInView: self];
+    
+    if(CGRectIsNull(initialFrame))
+        initialFrame = self.frame;
+}
+
+-(void) touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch = [[event allTouches] anyObject];
+    
+    CGPoint location = [touch locationInView: self];
+    
+    CGFloat yDisplacement = location.y - lastLocation.y;
+    
+    CGRect frame = touch.view.frame;
+    frame.origin.y += yDisplacement;
+    
+    if(frame.origin.y > initialFrame.origin.y)
+        frame.origin.y = initialFrame.origin.y;
+
+    if(frame.origin.y < 0)
+        frame.origin.y = 0;
+    
+    touch.view.frame = frame;
+}
+
+-(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    
+    if((self.frame.origin.y < ((self.frame.size.height - (self.frame.size.height - initialFrame.origin.y)) * 0.5f)))
+    {
+        [UIView animateWithDuration:0.3f animations:^{
+            CGRect f = self.frame;
+            f.origin.y = 0;
+            self.frame = f;
+        } completion:^(BOOL finished) {
+            if(finished)
+                [delegate didDetailsOpened];
+        }];
+    }
+    else
+    {
+        [UIView animateWithDuration:0.3f animations:^{
+            self.frame = initialFrame;
+        } completion:^(BOOL finished) {
+            if(finished)
+                [delegate didDetailsClosed];
+        }];
+    }
+}
 
 @end

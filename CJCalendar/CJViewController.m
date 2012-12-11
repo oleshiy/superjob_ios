@@ -16,6 +16,7 @@
 #import "Calendar.h"
 #import "Month.h"
 #import "MonthView.h"
+#import "KalDate.h"
 
 @interface CJViewController ()
 
@@ -73,7 +74,13 @@
     [doc release];
     
     NSUInteger numberOfMonthes = [calendar.monthes count];
+    
+    CGRect currentMonthRect = CGRectZero;
 
+    NSDate* date = [NSDate date];
+
+    KalDate* dt = [KalDate dateFromNSDate:date];
+    
 	for(NSUInteger i=0; i < numberOfMonthes; ++i)
 	{
         Month* month = [calendar.monthes objectAtIndex:i];
@@ -86,12 +93,21 @@
 		[monthScroll addSubview:mv];
 		[mv release];
         mv.delegate = self;
+        
+        if(dt.month == month.monthNum)
+            currentMonthRect = mv.frame;
+        
 		//monthDate = [monthDate cc_dateByMovingToFirstDayOfTheFollowingMonth];
 	}
 	
 	monthScroll.contentSize = CGSizeMake(monthViewWidth * numberOfMonthes, monthViewHeight);
     
-    monthDetailsView.cal = calendar;
+    CJMonthDetailsView* v = (isRetina4)?monthDetailsViewRetina4:monthDetailsView;
+    v.cal = calendar;
+    
+    //    scroll to the current month;
+    [monthScroll scrollRectToVisible:currentMonthRect animated:YES];
+    
     [self updateMonthLabel];
     
 }
@@ -138,25 +154,56 @@
     
     UIImage* ribbonImage = [UIImage imageNamed:@"ribbon.png"];
     ribbonView.image = [ribbonImage stretchableImageWithLeftCapWidth:20 topCapHeight:0];
-    
-    // manage fonts
-    [self replaceFontFamilyOnlabelsInView:monthDetailsView];
-    [self replaceFontFamilyOnlabelsInView:calendarView];
-    [self replaceFontFamilyOnlabelsInView:controlsContainer];
-    
-    [self generateCalendar];
-    
-    [self.view insertSubview:monthDetailsView aboveSubview:calendarView];
-    CGRect f = monthDetailsView.frame;
-    
-    BOOL isRetina4 = NO;
+
+    isRetina4 = NO;
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
         if ([UIScreen mainScreen].bounds.size.height > 480.0f) {
             isRetina4 = YES;
         }
     }
-    f.origin.y = calendarView.frame.size.height + calendarView.frame.origin.y - ((isRetina4)?10:0);
-    monthDetailsView.frame = f;
+    
+    controlsContainer.hidden = isRetina4;
+
+    // manage fonts
+    [self replaceFontFamilyOnlabelsInView:monthDetailsView];
+    [self replaceFontFamilyOnlabelsInView:monthDetailsViewRetina4];
+    [self replaceFontFamilyOnlabelsInView:calendarView];
+    [self replaceFontFamilyOnlabelsInView:controlsContainer];
+    
+    [self generateCalendar];
+    
+    CJMonthDetailsView *v = (isRetina4)?monthDetailsViewRetina4:monthDetailsView;
+    v.delegate = self;
+    CGRect f = v.frame;
+    
+    [self.view insertSubview:v aboveSubview:calendarView];
+    
+    f.origin.y = calendarView.frame.size.height + calendarView.frame.origin.y;
+    v.frame = f;
+}
+
+-(void) didDetailsClosed
+{
+    if(controlsContainer.hidden)
+        return;
+    
+    [UIView animateWithDuration:0.3f animations:^{
+        
+        controlsContainer.transform = CGAffineTransformMakeTranslation(0, 0);
+        
+    }];
+}
+
+-(void) didDetailsOpened
+{
+    if(controlsContainer.hidden)
+        return;
+
+    [UIView animateWithDuration:0.3f animations:^{
+        
+        controlsContainer.transform = CGAffineTransformMakeTranslation(0, controlsContainer.frame.size.height);
+        
+    }];    
 }
 
 -(void) viewWillAppear:(BOOL)animated
@@ -183,6 +230,7 @@
     [holidaysContainerView release];
     [holidayDatesLabel release];
     [holidayTitleLabel release];
+    [monthDetailsViewRetina4 release];
     [super dealloc];
 }
 
@@ -198,7 +246,8 @@
     MonthView* mv = [monthScroll.subviews objectAtIndex:calculatedOffset];
     monthTitle.text = [NSString stringWithFormat:@"%@ %d", mv.month.name, mv.month.year];
     
-    monthDetailsView.month = mv.month;
+    CJMonthDetailsView* v = (isRetina4)?monthDetailsViewRetina4:monthDetailsView;
+    v.month = mv.month;
     
     periodInfoLabel.text = [NSString stringWithFormat:@"%d квартал, %d полугодие %d год", monthDetailsView.currentQuartal, monthDetailsView.currentHalf, mv.month.year];
     
@@ -290,18 +339,19 @@
     
     proViewVisible = !proViewVisible;
 
+    CJMonthDetailsView* v = (isRetina4)?monthDetailsViewRetina4:monthDetailsView;
     if(proViewVisible)
-        [monthDetailsView showAdditional:proViewVisible];
+        [v showAdditional:proViewVisible];
 
     [UIView animateWithDuration:0.3f animations:^{
 
-        monthDetailsView.transform = CGAffineTransformMakeTranslation(0, -monthDetailsView.frame.origin.y);
+        v.transform = CGAffineTransformMakeTranslation(0, -v.frame.origin.y);
         controlsContainer.transform = CGAffineTransformMakeTranslation(0, (proViewVisible)?controlsContainer.frame.size.height:0);
         
     } completion:^(BOOL finished) {
         if(finished && !proViewVisible)
         {
-            [monthDetailsView showAdditional:proViewVisible];
+            [v showAdditional:proViewVisible];
         }
     }];
     
@@ -340,6 +390,8 @@
     holidayDatesLabel = nil;
     [holidayTitleLabel release];
     holidayTitleLabel = nil;
+    [monthDetailsViewRetina4 release];
+    monthDetailsViewRetina4 = nil;
     [super viewDidUnload];
 }
 @end

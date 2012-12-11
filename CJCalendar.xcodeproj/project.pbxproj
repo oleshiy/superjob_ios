@@ -48,6 +48,7 @@
 		7246BF2C16642DA400E01B9F /* KalLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246BF2416642DA400E01B9F /* KalLogic.m */; };
 		7246BF2D16642DA400E01B9F /* MonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246BF2716642DA400E01B9F /* MonthView.m */; };
 		7246BF2E16642DA400E01B9F /* NSDateAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7246BF2916642DA400E01B9F /* NSDateAdditions.m */; };
+		72B41DD8167610240089B055 /* thinDivider@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72B41DD7167610240089B055 /* thinDivider@2x.png */; };
 		72B4C5F01662AF22006DA90C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72B4C5EF1662AF22006DA90C /* UIKit.framework */; };
 		72B4C5F21662AF22006DA90C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72B4C5F11662AF22006DA90C /* Foundation.framework */; };
 		72B4C5F41662AF22006DA90C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72B4C5F31662AF22006DA90C /* CoreGraphics.framework */; };
@@ -155,6 +156,7 @@
 		7246BF2716642DA400E01B9F /* MonthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonthView.m; sourceTree = "<group>"; };
 		7246BF2816642DA400E01B9F /* NSDateAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDateAdditions.h; sourceTree = "<group>"; };
 		7246BF2916642DA400E01B9F /* NSDateAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDateAdditions.m; sourceTree = "<group>"; };
+		72B41DD7167610240089B055 /* thinDivider@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thinDivider@2x.png"; sourceTree = "<group>"; };
 		72B4C5EB1662AF22006DA90C /* CJCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CJCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72B4C5EF1662AF22006DA90C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		72B4C5F11662AF22006DA90C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -248,6 +250,7 @@
 				7246BEB316640F3800E01B9F /* sjLogo@2x.png */,
 				7246BEB416640F3800E01B9F /* sjSlogan.png */,
 				7246BEB516640F3800E01B9F /* sjSlogan@2x.png */,
+				72B41DD7167610240089B055 /* thinDivider@2x.png */,
 				7246BEB616640F3800E01B9F /* thinDivider.png */,
 			);
 			path = Images;
@@ -554,6 +557,7 @@
 				72C732B916676D1E00ABA4D3 /* arrow1.png in Resources */,
 				72C732BA16676D1E00ABA4D3 /* arrow1@2x.png in Resources */,
 				72DE957C1668D22700243346 /* 3@2x.png in Resources */,
+				72B41DD8167610240089B055 /* thinDivider@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
