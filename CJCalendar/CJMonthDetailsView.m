@@ -337,8 +337,9 @@
     
     touch.view.frame = frame;
 
-    CGFloat hg = initialFrame.origin.y;
-    [delegate progressOpeningView:frame.origin.y / hg];
+    CGFloat hg = initialFrame.origin.y * 0.5;
+    CGFloat ls = frame.origin.y - hg;
+    [delegate progressOpeningView:ls / hg];
 }
 
 -(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
@@ -354,7 +355,6 @@
         } completion:^(BOOL finished) {
             if(finished)
             {
-                headDivider.alpha = 1.0;
                 [delegate didDetailsOpened];
             }
         }];
@@ -367,7 +367,6 @@
             if(finished)
             {
                 [delegate didDetailsClosed];
-                headDivider.alpha = 1.0;
             }
         }];
     }

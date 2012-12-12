@@ -192,7 +192,7 @@
     if(controlsContainer.hidden)
         return;
     
-    [UIView animateWithDuration:0.3f animations:^{
+    [UIView animateWithDuration:0.1f animations:^{
         
 //        controlsContainer.transform = CGAffineTransformMakeTranslation(0, 0);
         controlsContainer.alpha = 1.0;
@@ -204,7 +204,7 @@
     if(controlsContainer.hidden)
         return;
 
-    [UIView animateWithDuration:0.3f animations:^{
+    [UIView animateWithDuration:0.1f animations:^{
         
 //        controlsContainer.transform = CGAffineTransformMakeTranslation(0, controlsContainer.frame.size.height);
         controlsContainer.alpha = 0.0;
