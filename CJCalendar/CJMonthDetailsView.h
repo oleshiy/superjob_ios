@@ -26,6 +26,7 @@
     id<DetailsViewDelegate> delegate;
     
     
+    IBOutlet UIImageView *headDivider;
     IBOutlet UIButton *hideBtn;
     IBOutlet UILabel* monthTitle;
     IBOutlet UILabel* totalDaysLabel;
@@ -78,6 +79,8 @@
     
     CGPoint lastLocation;
     CGRect initialFrame;
+    
+    BOOL opening;
     
     
     

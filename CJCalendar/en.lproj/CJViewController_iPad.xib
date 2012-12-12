@@ -2727,8 +2727,8 @@
 			<string key="leftArrow.png">{12, 17}</string>
 			<string key="ribbon.png">{7, 14}</string>
 			<string key="rightArrow.png">{12, 17}</string>
-			<string key="sjLogo@2x.png">{188, 54}</string>
-			<string key="sjSlogan@2x.png">{315, 16}</string>
+			<string key="sjLogo@2x.png">{224, 62}</string>
+			<string key="sjSlogan@2x.png">{352, 20}</string>
 			<string key="thinDivider.png">{1, 1}</string>
 		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">1930</string>

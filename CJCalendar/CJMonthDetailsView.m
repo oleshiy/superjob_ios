@@ -56,6 +56,7 @@
     [quartWorkDaysDimlabel release];
     [halfyearWorkDaysDimlabel release];
     [yearWorkDaysDimlabel release];
+    [headDivider release];
     [super dealloc];
 }
 
@@ -304,6 +305,10 @@
 {
     UITouch *touch = [[event allTouches] anyObject];
     
+    [UIView animateWithDuration:0.3f animations:^{
+        headDivider.alpha = 0.0f;
+    }];
+    
     lastLocation = [touch locationInView: self];
     
     if(CGRectIsNull(initialFrame))
@@ -317,6 +322,9 @@
     CGPoint location = [touch locationInView: self];
     
     CGFloat yDisplacement = location.y - lastLocation.y;
+
+    opening = yDisplacement < 0;
+
     
     CGRect frame = touch.view.frame;
     frame.origin.y += yDisplacement;
@@ -335,8 +343,9 @@
 
 -(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    
-    if((self.frame.origin.y < ((self.frame.size.height - (self.frame.size.height - initialFrame.origin.y)) * 0.5f)))
+
+    //(self.frame.origin.y < ((self.frame.size.height - (self.frame.size.height - initialFrame.origin.y)) * 0.5f))
+    if(opening)
     {
         [UIView animateWithDuration:0.3f animations:^{
             CGRect f = self.frame;
@@ -344,7 +353,10 @@
             self.frame = f;
         } completion:^(BOOL finished) {
             if(finished)
+            {
+                headDivider.alpha = 1.0;
                 [delegate didDetailsOpened];
+            }
         }];
     }
     else
@@ -353,7 +365,10 @@
             self.frame = initialFrame;
         } completion:^(BOOL finished) {
             if(finished)
+            {
                 [delegate didDetailsClosed];
+                headDivider.alpha = 1.0;
+            }
         }];
     }
 }

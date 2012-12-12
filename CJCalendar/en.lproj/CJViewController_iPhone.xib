@@ -3645,6 +3645,14 @@
 					<int key="connectionID">409</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">headDivider</string>
+						<reference key="source" ref="549530864"/>
+						<reference key="destination" ref="976221753"/>
+					</object>
+					<int key="connectionID">522</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">onInfoButton:</string>
 						<reference key="source" ref="547837919"/>
@@ -3940,6 +3948,14 @@
 						<reference key="destination" ref="1064061473"/>
 					</object>
 					<int key="connectionID">517</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">headDivider</string>
+						<reference key="source" ref="435795528"/>
+						<reference key="destination" ref="866306815"/>
+					</object>
+					<int key="connectionID">523</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -5245,7 +5261,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">519</int>
+			<int key="maxID">523</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -5271,6 +5287,7 @@
 						<string key="halfyearWorkDaysDimlabel">UILabel</string>
 						<string key="halfyearWorkDaysLabel">UILabel</string>
 						<string key="halfyer20hrsLabel">UILabel</string>
+						<string key="headDivider">UIImageView</string>
 						<string key="hideBtn">UIButton</string>
 						<string key="holidaysLabel">UILabel</string>
 						<string key="monthTitle">UILabel</string>
@@ -5340,6 +5357,10 @@
 						<object class="IBToOneOutletInfo" key="halfyer20hrsLabel">
 							<string key="name">halfyer20hrsLabel</string>
 							<string key="candidateClassName">UILabel</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="headDivider">
+							<string key="name">headDivider</string>
+							<string key="candidateClassName">UIImageView</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="hideBtn">
 							<string key="name">hideBtn</string>
