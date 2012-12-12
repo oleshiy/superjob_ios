@@ -328,6 +328,9 @@
         frame.origin.y = 0;
     
     touch.view.frame = frame;
+
+    CGFloat hg = initialFrame.origin.y;
+    [delegate progressOpeningView:frame.origin.y / hg];
 }
 
 -(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event

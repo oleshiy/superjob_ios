@@ -14,6 +14,7 @@
 @protocol DetailsViewDelegate <NSObject>
 -(void) didDetailsOpened;
 -(void) didDetailsClosed;
+-(void) progressOpeningView:(CGFloat)values;
 @end
 
 @interface CJMonthDetailsView : UIView

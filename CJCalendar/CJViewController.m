@@ -182,6 +182,11 @@
     v.frame = f;
 }
 
+-(void) progressOpeningView:(CGFloat)value
+{
+    controlsContainer.alpha = value;
+}
+
 -(void) didDetailsClosed
 {
     if(controlsContainer.hidden)
@@ -189,8 +194,8 @@
     
     [UIView animateWithDuration:0.3f animations:^{
         
-        controlsContainer.transform = CGAffineTransformMakeTranslation(0, 0);
-        
+//        controlsContainer.transform = CGAffineTransformMakeTranslation(0, 0);
+        controlsContainer.alpha = 1.0;
     }];
 }
 
@@ -201,8 +206,8 @@
 
     [UIView animateWithDuration:0.3f animations:^{
         
-        controlsContainer.transform = CGAffineTransformMakeTranslation(0, controlsContainer.frame.size.height);
-        
+//        controlsContainer.transform = CGAffineTransformMakeTranslation(0, controlsContainer.frame.size.height);
+        controlsContainer.alpha = 0.0;
     }];    
 }
 
